@@ -11,7 +11,7 @@ In order to build libarmadito, you need the following tools:
 - automake/autoconf
 - GNU make
 - C compiler
-- glib, libmagic, libxml2 library and headers
+- glib, libmagic, libxml2, libmicrohttpd library and headers
 
 To install the needed headers:
 
@@ -19,13 +19,13 @@ To install the needed headers:
 
 ::
 
-     apt-get install automake autoconf libtool libglib2.0-dev libmagic-dev libxml2-dev libjson-c-dev
+     apt-get install automake autoconf libtool libglib2.0-dev libmagic-dev libxml2-dev libjson-c-dev libmicrohttpd-dev
 
 - Fedora:
 
 ::
 
-     dnf install automake autoconf libtool glib2-devel file-devel libxml2-devel json-c-devel
+     dnf install automake autoconf libtool glib2-devel file-devel libxml2-devel json-c-devel libmicrohttpd-devel
 
 
 Configuration
