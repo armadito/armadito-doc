@@ -3,6 +3,12 @@ Armadito H1 module
 
 **Armadito H1** module is a scan module dedicated to binaries analysis (PE and ELF).
 
+Sources are publicly available on github.com, you can get it with the following command :
+
+::
+
+   $ git clone https://github.com/armadito/armadito-mod-h1.git -b DEV
+
 Prerequisites
 -------------
 

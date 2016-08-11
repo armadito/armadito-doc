@@ -3,6 +3,12 @@ Armadito core
 
 **Armadito core** corresponds to libarmadito library. Symbols exported from this library allows all modules libraries to use the same APIs.
 
+Sources are publicly available on github.com, you can get it with the following command :
+
+::
+
+   $ git clone https://github.com/armadito/armadito-av.git -b DEV
+
 Prerequisites
 -------------
 

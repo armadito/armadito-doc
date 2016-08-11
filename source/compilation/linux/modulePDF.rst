@@ -8,13 +8,11 @@ The sources of tis module are divided into:
 - the analysis code, maintained in a separate git repo (armaditopdf)
 - this code, which acts as 'glue' between the analysis code and libarmadito
 
-The analysis code repository must be cloned before running the configure 
-script :
+Sources are publicly available on github.com, you can get it with the following command :
 
 ::
-    
-    cd SOMEWHERE\armadito-av\modules\modulePDF
-    git clone https://github.com/armadito/armadito-pdf -b DEV
+
+   $ git clone https://github.com/armadito/armadito-mod-pdf.git -b DEV
 
 
 Prerequisites
