@@ -3,6 +3,12 @@ Armadito ClamAV module
 
 **Armadito ClamAV** module corresponds to the integration of libclamav library within Armadito-av. 
 
+Sources are publicly available on github.com, you can get it with the following command :
+
+::
+
+   $ git clone https://github.com/armadito/armadito-mod-clamav.git -b DEV
+
 Prerequisites
 -------------
 

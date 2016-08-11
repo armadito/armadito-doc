@@ -3,6 +3,12 @@ Armadito gui
 
 Armadito gui rely on recent web technologies to provide a multi-plateform graphical user interface for Armadito antivirus. 
 
+Sources are publicly available on github.com, you can get it with the following command :
+
+::
+
+   $ git clone https://github.com/armadito/armadito-gui.git -b DEV
+
 Prerequisites
 -------------
 
