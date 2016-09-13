@@ -106,12 +106,14 @@ tags:
     description: antivirus actions
   - name: Event
     description: antivirus events
+  - name: Misc
+    description: helper stuff
 
 ################################################################################
 #                          Common parameters                                   #
 ################################################################################
 parameters:
-  token:
+  TokenParam:
     name: X-Armadito-Token
     in: header
     description: |
@@ -119,6 +121,13 @@ parameters:
       except to the '/api/register' path (which returns a new token).
     type: string
     required: true
+    
+  PathParam:
+    name: path
+    in: query
+    description: |
+      The path of the browsed folder
+    type: string
 
 ################################################################################
 #                             Path definitions                                 #
@@ -167,7 +176,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - $ref: '#/parameters/token'
+        - $ref: '#/parameters/TokenParam'
       responses:
         200:
           description: success
@@ -187,7 +196,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - $ref: '#/parameters/token'
+        - $ref: '#/parameters/TokenParam'
       responses:
         # Response code
         200:
@@ -216,7 +225,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - $ref: '#/parameters/token'
+        - $ref: '#/parameters/TokenParam'
       responses:
         200:
           description: event received OK
@@ -245,7 +254,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - $ref: '#/parameters/token'
+        - $ref: '#/parameters/TokenParam'
         - in: body
           name: body
           description: scan object containing the path to scan
@@ -276,7 +285,7 @@ paths:
       produces:
         - application/json
       parameters:
-        - $ref: '#/parameters/token'
+        - $ref: '#/parameters/TokenParam'
       responses:
         200:
           description: OK
@@ -285,6 +294,30 @@ paths:
           schema:
             $ref: '#/definitions/Error'
 
+  /browse:
+    get:
+      tags:
+        - Misc
+      description: |
+        Browse the server file system.
+        This part of the API is a "helper" part that can be used for instance by a graphical
+        user interface running inside a navigator such as firefox or chromium.
+        A navigator does not have access to the local file system, so, in order to select the
+        root path for an on-demand scan, it can use this API endpoint to browse the file system.
+      produces:
+        - application/json
+      parameters:
+        - $ref: '#/parameters/PathParam'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Path'
+        500:
+          description: OK
+          schema:
+            $ref: '#/definitions/Error'
+      
 definitions:
 
   Error:
@@ -295,6 +328,8 @@ definitions:
         format: int32
       message:
         type: string
+      data:
+        type: object
 
   Token:
     type: object
@@ -309,6 +344,36 @@ definitions:
         type: string
         enum: 
           - "ok"
+
+  Path:
+    description: |
+      This is the object returned by a 'browse' request
+    type: object
+    properties:
+      path:
+        type: string
+        description: the path
+      content:
+        type: array
+        items:
+          $ref: '#/definitions/PathEntry'
+
+  PathEntry:
+    description: |
+      This object represents one entry in a path content
+    type: object
+    properties:
+      name:
+        type: string
+        description: name relative to the parent path
+      type:
+        type: string
+        description: the type of the entry
+        enum:
+          - "folder"
+          - "file"
+          - "link"
+          - "other"
 
   Scan:
     type: object
