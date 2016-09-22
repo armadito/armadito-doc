@@ -317,7 +317,27 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/Error'
-      
+            
+  /version:
+    get:
+      tags:
+        - Misc
+      description: |
+        Get the antivirus version.
+        This request returns the antivirus version as a JSON object.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Version'
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+
+
 definitions:
 
   Error:
@@ -344,6 +364,12 @@ definitions:
         type: string
         enum: 
           - "ok"
+
+  Version:
+    type: object
+    properties:
+      antivirus-version:
+        type: string
 
   Path:
     description: |
