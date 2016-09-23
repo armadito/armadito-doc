@@ -55,18 +55,6 @@ After cloning the repository, the source tree of the user interface must be conf
 	bower install
 	npm install
 
-
-Installing node webkit
-----------------------
-
-Downloading the latest normal 32 and 64 bit from http://nwjs.io/downloads/, under the tarball:
-
-::
-
-        into the /home/joebar/install
-
-That's all
-
 Configuration
 -------------
 
@@ -124,12 +112,7 @@ Running the interface
 
 First, the Armadito daemon must be launched. Refer to Armadito documentation for instructions.
 
-The user interface can be launched with:
-
-::
-
-	exec /home/joebar/install/lib/armadito/gui/nwjs/current/nw /home/joebar/install/lib/armadito/gui
-
+Open your favorite web browser and got to the following URL : http://localhost:8888/app/index.html
 
 Debugging the interface
 -----------------------
