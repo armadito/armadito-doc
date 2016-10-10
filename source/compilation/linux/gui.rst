@@ -47,7 +47,7 @@ Installing bower (must be done as root too):
 Installing modules in source tree
 ---------------------------------
 
-After cloning the repository, the source tree of the user interface must be configured for node webkit:
+After cloning the repository, the source tree of the user interface must be configured :
 
 ::
 
