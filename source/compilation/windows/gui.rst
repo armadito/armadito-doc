@@ -1,7 +1,8 @@
 Armadito gui
 ============
 
-Armadito gui rely on recent web technologies to provide a multi-plateform graphical user interface for Armadito antivirus. 
+.. danger:: Graphical user interface is under redesign and new version is not yet ported to Windows. That will be fixed as soon as possible.
+
 
 Installing prerequisites
 ------------------------
