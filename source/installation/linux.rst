@@ -4,7 +4,7 @@ Installation on Linux
 Installation from sources
 -------------------------
 
-When installing Armadito from sources (either tarball or git clone), you must first build it. Refer to section **Compilation** > **Compilation on Linux** of this documentation for detailed instructions.
+When installing Armadito AV from sources (either tarball or git clone), you must first build it. Refer to section **Compilation** > **Compilation on Linux** of this documentation for detailed instructions.
 
 After proper configuration and build of the different parts (core, modules, gui), each part is simply installed by the following command:
 
