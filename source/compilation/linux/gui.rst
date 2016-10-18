@@ -14,7 +14,6 @@ Prerequisites
 
 To run Armadito graphical user interface, you need:
 
-- NW.js SDK
 - bower
 - node.js
 
@@ -83,7 +82,7 @@ Typical invocation of the configure script is:
 
 ::
 
-    $ /home/joebar/armadito-av/gui/configure --prefix=/home/joebar/install --enable-debug 
+    $ /home/joebar/armadito-av/gui/configure --prefix=/home/joebar/install
 
 Building
 --------
