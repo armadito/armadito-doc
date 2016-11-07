@@ -49,8 +49,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Armadito'
-copyright = u'2016, François Déchelle, Valentin Hamon, Ulrich Fausther'
-author = u'François Déchelle, Valentin Hamon, Ulrich Fausther'
+copyright = u'2016, Teclib'
+author = u'Teclib'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -236,8 +236,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Armadito.tex', u'Armadito Documentation',
-     u'François Déchelle, Valentin Hamon, Ulrich Fausther', 'manual'),
+    (master_doc, 'Armadito.tex', u'Armadito Antivirus Documentation',
+     u'Teclib', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -266,7 +266,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'armadito', u'Armadito Documentation',
+    (master_doc, 'armadito', u'Armadito Antivirus Documentation',
      [author], 1)
 ]
 
@@ -280,8 +280,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Armadito', u'Armadito Documentation',
-     author, 'Armadito', 'One line description of project.',
+    (master_doc, 'Armadito Antivirus', u'Armadito Antivirus Documentation',
+     author, 'Armadito Antivirus', 'One line description of project.',
      'Miscellaneous'),
 ]
 
