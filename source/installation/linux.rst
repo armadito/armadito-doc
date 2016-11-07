@@ -1,5 +1,5 @@
 Installation on Linux
-====================
+=====================
 
 Installation from sources
 -------------------------

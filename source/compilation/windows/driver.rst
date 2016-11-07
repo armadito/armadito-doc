@@ -1,5 +1,5 @@
-Armadito Windows Driver 
-======================
+Armadito Windows Driver
+=======================
 
 Armadito Windows Driver is responsible of on-access protection of Armadito antivirus.
 
@@ -12,11 +12,11 @@ Prerequisites
 
 To get Windows Driver Kit 8.1 : <https://www.microsoft.com/en-us/download/details.aspx?id=42273>
 
-.. warning:: Windows Driver Kit 8.1 goes **only** with MS Visual Studio 2013. You must get the WDK compatible to your Visual Studio version. 
+.. warning:: Windows Driver Kit 8.1 goes **only** with MS Visual Studio 2013. You must get the WDK compatible to your Visual Studio version.
 
 
 Driver Signing
--------------
+--------------
 
 Add your certificate to local store
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -24,7 +24,7 @@ Add your certificate to local store
 - Open the Certificate Manager Tool (certmgr.msc)
 - Go to **Certificates - Actual User** > **Personal** > **Certificates**
 - Right-click on the folder and choose **All tasks** > **Import**
-- Then, follow the assistant to import your certificate. 
+- Then, follow the assistant to import your certificate.
 
 
 Sign with your certificate
@@ -40,15 +40,15 @@ Sign with your certificate
 Build
 -----
 
-Open the armadito-av VS solution at location : 
- 
+Open the armadito-av VS solution at location :
+
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\Armadito-AV.sln
 
-Firstly, select **Driver\ArmaditoGuard** project in Solution Explorer and build it. 
+Firstly, select **Driver\ArmaditoGuard** project in Solution Explorer and build it.
 
-Then, select **Driver\\ArmaditoGuard Package** project in Solution Explorer and build it. 
+Then, select **Driver\\ArmaditoGuard Package** project in Solution Explorer and build it.
 
 Finally, select **Setup\\ArmaditoGuard-setup** project in Solution Explorer and build it.
 
@@ -61,7 +61,7 @@ Out folder could be one of these :
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Debug
 
-or 
+or
 
 ::
 
