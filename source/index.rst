@@ -2,9 +2,9 @@
    sphinx-quickstart on Tue Apr 12 17:35:15 2016.
 
 .. image:: armadito_logo.png
-   :height: 48px
-   :width: 48px
-   :alt: alternate text
+   :height: 78px
+   :width: 78px
+   :alt: armadito logo
    :align: left
 
 ===================
@@ -21,7 +21,7 @@ Armadito Antivirus is an open-source antivirus that protects your computers and 
    installation/index.rst
    configuration/index.rst
    contribute/index.rst
-   licensing/index.rst  
+   licensing/index.rst
 ..   faq/index.rst
 ..   screenshots/index.rst
-   
+
