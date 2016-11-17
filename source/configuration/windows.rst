@@ -1,16 +1,16 @@
-Configuration on Windows
+Configuration sur Windows
 ========================
 
-Armadito AV's configuration on Windows can be modified in the following file :
+Armadillo AVs configuration sur Windows peut être modifié dans le fichier suivant:
  
 * <**install_dir**>\\Armadito-av\\conf\\armadito.conf
 
 .. note:: By default, **install_dir** is *C:\\Program Files\\Teclib*.
 
-On-demand scan 
+Analyse à la demande 
 ~~~~~~~~~~~~~~
 
-You are able to configure how on-demand scan works in **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse à la demande **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
 
 ::
 
@@ -20,16 +20,16 @@ You are able to configure how on-demand scan works in **<install_dir>\\Armadito-
    modules="clamav"; "moduleH1"
    max-size = 10048576 
 
-* **white-list-dir** : list of directories excluded from on-demand scan (not yet implemented).
-* **mime-types** : MIME types of files scanned during on-demand scan.
-* **modules** : Modules used by on-demand scan.
-* **max-size** : Maximum size of scanned files during on-demand scan. 
+* **white-list-dir** : Liste des répertoires exclus de l'analyse à la demande (non encore implémentée).
+* **mime-types** : Types de fichiers MIME analysés lors d'une analyse à la demande.
+* **modules** : Modules utilisés par l'analyse à la demande.
+* **max-size** : Taille maximale des fichiers numérisés lors de l'analyse à la demande.
 
 
-On-access scan 
+Numérisation à l'accès
 ~~~~~~~~~~~~~~
 
-You are able to configure how on-access scan works in **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse en **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
 
 ::
 
@@ -38,21 +38,21 @@ You are able to configure how on-access scan works in **<install_dir>\\Armadito-
    mime-types="*"
    modules="clamav"
 
-* **enable** : enable (1) or disable (0) on-access scan.
-* **mime-types** : MIME types of files scanned during on-access scan.
-* **modules** : Modules used by on-access scan.
+* **activer**: activer (1) ou désactiver (0) le balayage à l'accès.
+* **mime-types**: Types de fichiers MIME numérisés lors de l'analyse à l'accès.
+* **modules**: Modules utilisés par le scan à l'accès.
 
 
-Virus Alerts
+Alertes de virus
 ~~~~~~~~~~~~
 
-Not yet implemented.
+Pas encore implémenté.
 
-Quarantine
+Quarantaine
 ~~~~~~~~~~
 
-To isolate infected files, Armadito AV can put detected files in quarantine.
-**<install_dir>\\Armadito-av\\conf\\armadito.conf** contains configuration about quarantine :
+Pour isoler les fichiers infectés, Armadito AV peut placer les fichiers détectés en quarantaine.
+**<dir_installation>\\Armadito-av\\conf\\armadito.conf** contient la configuration de la quarantaine:
 
 :: 
    
@@ -60,8 +60,8 @@ To isolate infected files, Armadito AV can put detected files in quarantine.
    enable = 0
    quarantine-dir = "quarantine"
 
-* **enable** : enable (1) or disable (0) quarantine.
-* **quarantine-dir** : sub directory where will be moved files put in quarantine.
+* **activer** : Activer (1) ou désactiver (0) la quarantaine.
+* **Quarantine-dir** : Sous-répertoire où seront déplacés les fichiers mis en quarantaine.
 
 
 .. toctree::
