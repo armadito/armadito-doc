@@ -1,19 +1,19 @@
-Configuration on Linux
+Configuration sous Linux
 ======================
 
-Armadito AV's configuration on Linux is stored in two files :
- 
-* /etc/armadito/armadito.conf
+Armadillo AVs configuration sur Linux est stocké dans deux fichiers:
+
+* /etc/armadillo/armadillo.conf
 * /etc/armadito/conf.d/on-access-linux.conf
 
-.. note:: If you have compiled from sources, these configuration files are in your PREFIX directory.
+.. note:: Si vous avez compilé à partir de sources, ces fichiers de configuration se trouvent dans votre répertoire PREFIX.
 
-.. warning:: Configuration presented in this document is used for illustration purposes only. 
+.. warning:: La configuration présentée dans ce document est utilisée uniquement à des fins d'illustration.
 
-On-demand scan 
+Analyse à la demande 
 ~~~~~~~~~~~~~~
 
-You are able to configure how on-demand scan works in **/etc/armadito/armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse à la demande dans ** / etc / armadito / armadito.conf **:
 
 ::
 
@@ -23,18 +23,19 @@ You are able to configure how on-demand scan works in **/etc/armadito/armadito.c
    modules="clamav"; "moduleH1"
    max-size = 10048576 
 
-* **white-list-dir** : list of directories excluded from on-demand scan.
-* **mime-types** : MIME types of files scanned during on-demand scan.
-* **modules** : Modules used by on-demand scan.
-* **max-size** : Maximum size of scanned files during on-demand scan. 
+* **white-list-dir** : Liste des répertoires exclus de l'analyse à la demande.
+* **mime-types** : Types de fichiers MIME analysés lors d'une analyse à la demande.
+* **modules** : Modules utilisés par l'analyse à la demande.
+* **max-size** : Taille maximale des fichiers numérisés lors de l'analyse à la demande.
 
-On-access scan
+Numérisation à l'accès
 ~~~~~~~~~~~~~~
 
-Linux Armadito AV's on-access scan mainly relies on fanotify API. 
-You can find further information on how it works by reading official man page : `fanotify man7 <http://man7.org/linux/man-pages/man7/fanotify.7.html>`_.
 
-Configuring on-access scan can be done by modifying **/etc/armadito/conf.d/on-access-linux.conf** :
+L'analyse à l'accès d'Armadito AV s'appuie principalement sur l'API fanotify.
+Vous pouvez trouver plus d'informations sur la façon dont il fonctionne en lisant la page de manuel: `fanotify man7 <http://man7.org/linux/man-pages/man7/fanotify.7.html>` _.
+
+La configuration de l'analyse à l'accès peut être effectuée en modifiant ** / etc / armadito / conf.d / on-access-linux.conf **:
 
 ::
  
@@ -50,40 +51,40 @@ Configuring on-access scan can be done by modifying **/etc/armadito/conf.d/on-ac
    max-size = 10048576 
 
 
-* **enable** : enable (1) or disable (0) on-access scan. 
-* **enable-permission** : enable (1) or disable (0) permission check. 
+* **activer** : Activez (1) ou désactivez (0) l'analyse à l'accès.
+* **enable-permission**: validation (1) ou désactivation (0) vérification d'autorisation.
 
-  * If **enabled**, files detected as malicious will be blocked by Armadito AV. 
-  * If **disabled**, files detected as malicious will only be notified.
-* **enable-removable-media** : enable (1) or disable (0) removable media monitoring. 
+   * Si **activé**, les fichiers détectés comme malveillants seront bloqués par Armadito AV.
+   * Si **désactivé**, les fichiers détectés comme malveillants ne seront notifiés.
+* **enable-removable-media**: active (1) ou désactive (0) la surveillance des médias amovibles.
 
-  * If **enabled**, removable media mount points will be added on the fly to the monitoring list.
-* **mount** : list of directories that will be monitored by mount points. I.e. using FAN_MARK_MOUNT.
-* **directory** : list of directories that will be monitored by recursively marking all subdirectories. 
-* **white-list-dir** : list of directories excluded from on-demand scan.
-* **mime-types** : MIME types of files scanned during on-demand scan.
-* **modules** : Modules used by on-demand scan.
-* **max-size** : Maximum size of scanned files during on-demand scan. 
+  * Si **activé**, des points de montage de supports amovibles seront ajoutés à la volée à la liste de surveillance.
+* **mount**: liste des répertoires qui seront surveillés par des points de montage. C'est à dire. En utilisant FAN_MARK_MOUNT.
+* **répertoire**: liste des répertoires qui seront surveillés par un marquage récursif de tous les sous-répertoires.
+* **white-list-dir**: liste des répertoires exclus de l'analyse à la demande.
+* **mime-types**: Types de fichiers MIME analysés lors d'une analyse à la demande.
+* **modules**: Modules utilisés par l'analyse à la demande.
+* **max-size**: Taille maximale des fichiers numérisés lors d'une analyse à la demande.
 
 
-Virus Alerts
+Alertes de virus
 ~~~~~~~~~~~~
 
-When a virus is detected by Armadito AV, an alert report is generated and stored in a defined location.
-This can be configured by modifying **/etc/armadito/armadito.conf** :
+Lorsqu'un virus est détecté par Armadito AV, un rapport d'alerte est généré et stocké dans un emplacement défini.
+Cela peut être configuré en modifiant **/ etc / armadito / armadito.conf**:
 
 :: 
 
    [alert]
    alert-dir = "/var/spool/armadito"
 
-* **alert-dir** : directory where scan alerts will be stored.
+* **alert-dir** : Dans lequel les alertes d'analyse seront stockées.
 
-Quarantine
+Quarantaine
 ~~~~~~~~~~
 
-To isolate infected files, Armadito AV can put detected files in quarantine.
-**/etc/armadito/armadito.conf** contains configuration about quarantine :
+Pour isoler les fichiers infectés, Armadito AV peut placer les fichiers détectés en quarantaine.
+**/ etc / armadito / armadito.conf** contient la configuration de la quarantaine:
 
 :: 
    
@@ -91,8 +92,8 @@ To isolate infected files, Armadito AV can put detected files in quarantine.
    enable = 0
    quarantine-dir = "/var/lib/armadito/quarantine"
 
-* **enable** : enable (1) or disable (0) quarantine.
-* **quarantine-dir** : directory where will be moved files putted in quarantine.
+* **enable**: active (1) ou désactive (0) la quarantaine.
+* **quarantine-dir**: répertoire où seront déplacés les fichiers mis en quarantaine.
 
 
 .. toctree::
