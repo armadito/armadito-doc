@@ -1,4 +1,4 @@
-Frequently Asked Questions
+Foire Aux Questions
 ==========================
 
 .. toctree::
