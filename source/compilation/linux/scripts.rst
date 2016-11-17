@@ -1,45 +1,46 @@
-Prepare compilation
+Préparer la compilation
 *******************
 
-Firstly, you need to download sources from our public github.
-The next thing you need to do is setting the OS_V variable inside main script "compile_all.sh". 
-It corresponds to the out subdirectory name where will be stored build stuff.
+Tout d'abord, vous devez télécharger des sources de notre github public. La prochaine chose que vous devez faire est de définir la variable OS_V dans le script principal "compile_all.sh".
+Il correspond au nom du sous-répertoire out où seront stockés les éléments de compilation.
 
-For example, in **compile_all.sh** :
+Par exemple, dans ** compile_all.sh **:
 ::
 
    OS_V=ubuntu-14.04-64
 
 
-Compile everything
+Compiler tout
 ******************
 
-If you want to compile everything :
+Si vous souhaitez tout compiler:
 ::
 
    $ cd armadito-av/scripts/
    $ ./compile_all.sh
 
 
-Compile module by module
+
+Compiler module par module
 ************************
 
-If you want to compile one module only, or core :
+Si vous souhaitez compiler un seul module, ou core:
 ::
 
    $ cd armadito-av/scripts/
    $ ./compile_all.sh PACKAGE
 
-**PACKAGE** could be one of the following : 
+
+** PACKAGE ** pourrait être l'un des suivants:
 
 * core (libarmadito)
 * clamav (armadito-mod-clamav)
 * moduleH1 (armadito-mod-moduleH1)
 * modulePDF (armadito-mod-PDF)
 
-Compilation Results
+Résultats de la compilation
 *******************
 
-By default, compilation results are located in **armadito-av/out/build/$OS_V**.
+Par défaut, les résultats de la compilation sont situés dans ** armadito-av / out / build / $ OS_V **.
 
-The next step is installation, i.e. with "make install".
+L'étape suivante est l'installation, c'est-à-dire avec "make install".
