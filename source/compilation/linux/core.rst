@@ -1,25 +1,25 @@
 Armadito core
 =============
 
-**Armadito core** corresponds to libarmadito library. Symbols exported from this library allows all modules libraries to use the same APIs.
+**Armadito core** correspond à la librairie libarmadito. Les symboles exportés depuis cette bibliothèque permettent à toutes les bibliothèques de modules d'utiliser les mêmes API.
 
-Sources are publicly available on github.com, you can get it with the following command :
+Les sources sont accessibles au public sur github.com, vous pouvez l'obtenir avec la commande suivante:
 
 ::
 
    $ git clone https://github.com/armadito/armadito-av.git -b DEV
 
-Prerequisites
+Les prérequis
 -------------
 
-In order to build libarmadito, you need the following tools:
+Pour construire libarmadito, vous avez besoin des outils suivants:
 
-- automake/autoconf
-- GNU make
-- C compiler
-- glib, libmagic, libxml2, libmicrohttpd, libcurl libraries and headers
+- automake / autoconf
+- Fabrication GNU
+- Compilateur C
+- glib, libmagic, libxml2, libmicrohttpd, bibliothèques libcurl et en-têtes
 
-To install the needed headers:
+Pour installer les en-têtes nécessaires:
 
 - Ubuntu: 
 
@@ -37,8 +37,8 @@ To install the needed headers:
 Configuration
 -------------
 
-Once git repo cloned, you need to initialize the build using automake, autoconf and tools.
-A shell script **autogen.sh** is provided to ease this step:
+Une fois git repo cloné, vous devez initialiser la construction en utilisant automake, autoconf et des outils.
+Un script shell **autogen.sh** est prévu pour faciliter cette étape :
 
 ::
 
@@ -49,51 +49,51 @@ A shell script **autogen.sh** is provided to ease this step:
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-This will generate the **Makefile.in** files and the **configure** script.
+Cela **Makefile.in** fichiers et les **configure** script.
 
-**configure** script takes the following useful options:
+**configure** script prend les options utiles suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
     --enable-debug          enable debugging [default is yes]
 
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
-building a package and installing in system directories, since building the
-scanning modules and the graphical user interface will need a libarmadito properly
-installed.
+Le répertoire ** PREFIX ** sera utilisé par ** make install **. Son utilisation est obligatoire, sauf si
+La construction d'un paquetage et l'installation dans les répertoires système,
+Les modules de balayage et l'interface utilisateur graphique aura besoin d'un libarmadito correctement
+Installé.
 
-Building in a separate directory is highly recommended, unless you really want
-to clobber the source tree with objects, libraries, binaries and other stuff.
+Bâtir dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
+Pour gifler l'arbre source avec des objets, des bibliothèques, des binaires et d'autres choses.
 
 ::
 
     $ mkdir /home/joebar/build/libarmadito
 
-Typical invocation of the configure script is:
+L'appel typique du script de configuration est:
 
 ::
 
     $ /home/joebar/armadito-av/libarmadito/configure --prefix=/home/joebar/install --enable-debug 
 
 
-Building
+Construction
 --------
 
-Once configured, build is easy:
+Une fois configuré, la construction est facile:
 
 ::
 
     $ make
 
-Installing
+Installation
 ----------
 
-After build, installation is done by:
+Après la construction, l'installation se fait par:
 
 ::
 
     $ make install
 
-This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
-directory defined at configure time.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du ** PREFIX **
+Répertoire défini au moment de la configuration.
 
 .. toctree::
