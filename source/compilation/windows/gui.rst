@@ -1,59 +1,59 @@
 Armadito gui
 ============
 
-.. danger:: Graphical user interface is under redesign and new version is not yet ported to Windows. That will be fixed as soon as possible.
+.. danger:: L'interface utilisateur graphique est en cours de refonte et la nouvelle version n'est pas encore portée à Windows. Ce sera réglé dès que possible.
 
 
-Installing prerequisites
+Installation de prérequis
 ------------------------
 
-The prerequisites are:
+Les conditions préalables sont les suivantes:
 
 * node.js
-* git (needed by bower)
+* Git (nécessaire par bower)
 * bower
 
-Installing node and bower
+Installation d'un noeud et d'une façade
 -------------------------
 
-First, download node.js from https://nodejs.org/en/download/, using either the .msi or the .exe installer, at your choice.
+Tout d'abord, téléchargez node.js depuis https://nodejs.org/en/download/, en utilisant l'installateur .msi ou le programme d'installation .exe, à votre choix.
 
-During installation, default configuration choices are OK.
+Pendant l'installation, les choix de configuration par défaut sont OK.
 
-Once node is installed, launch a command line.
+Une fois le nœud installé, lancez une ligne de commande.
 
-Checking installation:
+Vérification de l'installation:
 
 ::
 
 	npm --version
 	2.15.1
 
-Then install bower using:
+Puis installez bower en utilisant:
 
 ::
 
 	npm install -g bower
 
-Install git
+Installer git
 -----------
 
-To use bower, you must first install git.
+Pour utiliser bower, vous devez d'abord installer git.
 
-git for windows is available here : https://git-for-windows.github.io/
+Git pour windows est disponible ici: https://git-for-windows.github.io/
 
-Checking installation:
+Vérification de l'installation:
 
 ::
 
 	git version 2.8.1.windows.1
 
 
-Installing modules in source tree
+Installation des modules dans l'arborescence des sources
 ---------------------------------
 
 
-Run bower from **armadito-av/gui** directory to install the needed modules:
+Exécutez le bower à partir du répertoire ** armadito-av / gui ** pour installer les modules nécessaires:
 
 ::
          
@@ -61,52 +61,49 @@ Run bower from **armadito-av/gui** directory to install the needed modules:
 	 bower install
 	 npm install
 
-This should output a lot of messages
+Cela devrait générer beaucoup de messages
 
 
-Installing node webkit
+Installation de Webkit de noeud
 ----------------------
 
-Download the archive from: http://nwjs.io/downloads/
+Téléchargez l'archive à partir de: http://nwjs.io/downloads/
 
-Make sure to download the SDK.
+Assurez-vous de télécharger le SDK.
 
-Extract the archive using Windows file explorer.
+Extrayez l'archive à l'aide de l'explorateur de fichiers Windows.
 
 
-Running the interface
+Exécution de l'interface
 ---------------------
-
-First, the Armadito service must be launched.
-
-The user interface can be launched with:
+Tout d'abord, le service Armadillo doit être lancé.
+L'interface utilisateur peut être lancée avec:
 
 ::
 
 	cd SOMEWHERE\ng-armadito
 	SOMEWHEREELSE\nwjs-sdk-v0.14.0-win-x64\nw.exe .
 
-Debugging the interface
+Débogage de l'interface
 -----------------------
 
-Once the interface is launched:
+Une fois l'interface lancée:
 
-- right-click in the window to display debug menu and select "Inspect" or tap F12
-- in the inspector window, select the "console" tab
+- cliquez avec le bouton droit de la souris dans la fenêtre pour afficher le menu de débogage et sélectionnez «Inspecter» ou appuyez sur F12
+- dans la fenêtre de l'inspecteur, sélectionnez l'onglet "console"
 
-Build with grunt
+Construire avec grunt
 ----------------
 
-Install grunt :
+Installer grunt:
 
 :: 
 
          npm install -g grunt-cli
 
-Run `grunt` for building and `grunt serve` for preview.
+Exécuter `grunt` pour la construction et` grunt servir `pour l'aperçu.
 
-You can use "--force" if you want to build with warnings.
+Vous pouvez utiliser "--force" si vous voulez construire avec des avertissements.
 
-.. note:: This project is generated with [yo angular generator] version 0.15.1. 
-
+.. note:: Ce projet est généré avec [yo génération angulaire] version 0.15.1.
 
