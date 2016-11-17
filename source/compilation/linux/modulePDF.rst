@@ -1,39 +1,39 @@
-Armadito PDF module 
+Armadito module PDF 
 ===================
 
-Armadito PDF module is a scan module dedicated to PDFs file analysis.
+Le module Armadito PDF est un module d'analyse dédié à l'analyse de fichiers PDF.
 
-The sources of tis module are divided into:
+Les sources de ce module sont divisées en:
 
-- the analysis code, maintained in a separate git repo (armaditopdf)
-- this code, which acts as 'glue' between the analysis code and libarmadito
+- le code d'analyse, maintenu dans un git repo séparé (armaditopdf)
+- ce code, qui agit comme «colle» entre le code d'analyse et libarmadito
 
-Sources are publicly available on github.com, you can get it with the following command :
+Les sources sont accessibles au public sur github.com, vous pouvez l'obtenir avec la commande suivante:
 
 ::
 
    $ git clone https://github.com/armadito/armadito-mod-pdf.git -b DEV
 
 
-Prerequisites
+Prérequis
 -------------
 
-In order to compile Armadito PDF module, you need the following tools:
+Afin de compiler le module Armadito PDF, vous avez besoin des outils suivants:
 
-- automake/autoconf
-- GNU make
-- C compiler
+- automake / autoconf
+- Fabrication GNU
+- Compilateur C
 
 
-.. warning:: Be sure you have built **Armadito core** library before trying to build this module.
+.. warning :: Assurez-vous d'avoir construit ** Armadito core ** bibliothèque avant d'essayer de construire ce module.
 
 
 Configuration
 -------------
 
 
-To initialize the build using automake, autoconf and tools, a shell script 
-**autogen.sh** is provided to ease this step:
+Pour initialiser la compilation à l'aide de automake, autoconf et tools, un script shell
+** autogen.sh ** est fourni pour faciliter cette étape:
 
 ::
 
@@ -43,57 +43,57 @@ To initialize the build using automake, autoconf and tools, a shell script
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-This will generate the **Makefile.in** files and the **configure** script.
+Cela générera les fichiers ** Makefile.in ** et le script ** configure **.
 
-**configure** script takes the following useful options:
+** configure ** script prend les options utiles suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX
                             [/usr/local]
     --enable-debug          enable debugging [default is yes]
 
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
-building a package and installing in system directories.
+Le répertoire ** PREFIX ** sera utilisé par ** make install **. Son utilisation est obligatoire, sauf si
+La construction d'un paquet et l'installation dans les répertoires système.
 
-libarmadito use the **pkg-config** utility to specify compiling options relative to 
-libarmadito. Since the **libarmadito.pc** specification file for **pkg-config** is not located
-in standard directory (usual **/usr/lib/pkgconfig**), invoking the configure script 
-must use the **PKG_CONFIG_PATH** environment variable.
+Libarmadito utilise l'utilitaire ** pkg-config ** pour spécifier des options de compilation relatives à
+Libarmadito. Étant donné que le fichier de spécification ** libarmadito.pc ** pour ** pkg-config ** n'est pas situé
+Dans le répertoire standard (habituel ** / usr / lib / pkgconfig **), appelant le script configure
+Doit utiliser la variable d'environnement ** PKG_CONFIG_PATH **.
 
-Building in a separate directory is highly recommended, unless you really want
-to clobber the source tree with objects, libraries, binaries and other stuff.
+Bâtir dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
+Pour gifler l'arbre source avec des objets, des bibliothèques, des binaires et d'autres choses.
 
 ::
 
     $ mkdir /home/joebar/build/modules/modulePDF
 
-Typical invocation of the configure script is:
+L'appel typique du script de configuration est:
 
 ::
 
     $ /home/joebar/armadito-av/modules/modulePDF/configure --prefix=/home/joebar/install --enable-debug PKG_CONFIG_PATH=/home/joebar/install/lib/pkgconfig
 
-Note that the path specified in the value of **PKG_CONFIG_PATH** must be coherent
-with the **PREFIX** used in libarmadito installation (see **Armadito core** linux build section).
+Notez que le chemin spécifié dans la valeur de ** PKG_CONFIG_PATH ** doit être cohérent
+Avec ** PREFIX ** utilisé dans l'installation libarmadito (voir ** Armadito core ** linux build section).
 
 
-Building
+Bâtiment
 --------
 
-Once configured, build is easy:
+Une fois configuré, la construction est facile:
 
 ::
 
     $ make
 
 
-Installing
+Installation
 ----------
 
-After build, installation is done by:
+Après la construction, l'installation se fait par:
 
 ::
 
     $ make install
 
-This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
-directory defined at configure time.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du ** PREFIX **
+Répertoire défini au moment de la configuration.
