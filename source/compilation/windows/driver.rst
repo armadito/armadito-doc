@@ -1,46 +1,46 @@
-Armadito Windows Driver
+Pilote Windows Armadito
 =======================
 
-Armadito Windows Driver is responsible of on-access protection of Armadito antivirus.
+Armadito Windows Driver est responsable de la protection sur l'accès de l'antivirus Armadito.
 
-Prerequisites
+Conditions préalables
 -------------
 
-* Microsoft Visual Studio 2013 (Community edition or more)
-* Armadito windows dependencies archive (deps.zip)
-* Windows Driver Kit 8.1
+* Microsoft Visual Studio 2013 (édition communautaire ou plus)
+* Armadito fenêtres dépendances archives (deps.zip)
+* Kit de pilotes Windows 8.1
 
-To get Windows Driver Kit 8.1 : <https://www.microsoft.com/en-us/download/details.aspx?id=42273>
+Pour obtenir Windows Driver Kit 8.1: <https://www.microsoft.com/en-us/download/details.aspx?id=42273>
 
-.. warning:: Windows Driver Kit 8.1 goes **only** with MS Visual Studio 2013. You must get the WDK compatible to your Visual Studio version.
+.. warning:: Windows Driver Kit 8.1 va ** seulement ** avec MS Visual Studio 2013. Vous devez obtenir le WDK compatible avec votre version de Visual Studio.
 
 
-Driver Signing
+Signature du conducteur
 --------------
 
-Add your certificate to local store
+Ajoutez votre certificat au magasin local
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Open the Certificate Manager Tool (certmgr.msc)
-- Go to **Certificates - Actual User** > **Personal** > **Certificates**
-- Right-click on the folder and choose **All tasks** > **Import**
-- Then, follow the assistant to import your certificate.
+- Ouvrez l'outil Certificate Manager (certmgr.msc)
+- Allez à ** Certificats - Utilisateur actuel **> ** Particulier **> ** Certificats **
+- Cliquez avec le bouton droit de la souris sur le dossier et choisissez ** Toutes les tâches **> ** Import **
+- Ensuite, suivez l'assistant pour importer votre certificat.
 
 
-Sign with your certificate
+Signer avec votre certificat
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Open Armadito-av solution in Visual Studio.
-- Right-click on project **ArmaditoGuard** and select **Properties**.
-- Go to **Configuration Properties** > **Driver Signing** > **General**.
-- **Sign mode** > **Product Sign**.
-- **Production Certificate** > **Select from store** and select your certificate previously added.
-- Repeat the previous steps for the project **ArmaditoGuard Package**.
+- Ouvrez la solution Armadito-av dans Visual Studio.
+- Cliquez avec le bouton droit de la souris sur le projet ** ArmaditoGuard ** et sélectionnez ** Propriétés **.
+- Accédez à ** Propriétés de configuration **> ** Signature du pilote **> ** Général **.
+- ** Signe mode **> ** Signe du produit **.
+- ** Certificat de production **> ** Sélectionnez dans le magasin ** et sélectionnez votre certificat précédemment ajouté.
+- Répétez les étapes précédentes pour le projet ** ArmaditoGuard Package **.
 
-Build
------
+Construire
+----------
 
-Open the armadito-av VS solution at location :
+Ouvrez la solution armadillo-av VS à l'emplacement:
 
 ::
 
@@ -55,7 +55,7 @@ Finally, select **Setup\\ArmaditoGuard-setup** project in Solution Explorer and 
 Out
 ---
 
-Out folder could be one of these :
+Out dossier pourrait être l'un de ces:
 
 ::
 
@@ -67,7 +67,7 @@ or
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Release
 
-If build has been successful, you should have this file :
+Si build a été un succès, vous devriez avoir ce fichier:
 
 ::
 
