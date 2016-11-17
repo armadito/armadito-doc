@@ -1,7 +1,7 @@
-Licensing
+Licences
 =========
 
-Armadito antivirus can be divided in subprojects, which are the following :
+Armadillo antivirus peut être divisé en sous-projets, qui sont les suivants:
 
 - Armadito core
 - Armadito gui
