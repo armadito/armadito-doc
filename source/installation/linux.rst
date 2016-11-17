@@ -1,32 +1,32 @@
-Installation on Linux
+Installation sur Linux
 =====================
 
-Installation from sources
+Installation à partir de sources
 -------------------------
 
-When installing Armadito AV from sources (either tarball or git clone), you must first build it. Refer to section **Compilation** > **Compilation on Linux** of this documentation for detailed instructions.
+Lorsque vous installez Armadito AV à partir de sources (soit tarball ou git clone), vous devez d'abord le construire. Reportez-vous à la section **Compilation**> **Compilation sur Linux** de cette documentation pour obtenir des instructions détaillées.
 
-After proper configuration and build of the different parts (core, modules, gui), each part is simply installed by the following command:
+Après la bonne configuration et la construction des différentes parties (noyau, modules, gui), chaque partie est simplement installée par la commande suivante:
 
 ::
 
     $ make install
 
-This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
-directory defined at configure time.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du **PREFIX**
+Répertoire défini au moment de la configuration.
 
-This command must be repeated for each directory (core/, modules/*/, gui/).
+Cette commande doit être répétée pour chaque répertoire (core /, modules / * /, gui /).
 
-Care must be take to configure each part with the same **prefix** so that the different components are installed at their respective locations.
+Il faut prendre soin de configurer chaque partie avec le même **préfixe** afin que les différents composants soient installés à leurs emplacements respectifs.
 
 
-Installation from packages
+Installation à partir de paquets
 --------------------------
 
-Ubuntu distributions
+Distributions Ubuntu
 ~~~~~~~~~~~~~~~~~~~~
 
-Packages for Ubuntu distributions are available at:
+Les packages pour les distributions Ubuntu sont disponibles à l'adresse suivante:
 
 **URL**: <https://launchpad.net/~armadito/+archive/ubuntu/armadito-av>
 
@@ -35,7 +35,7 @@ Packages for Ubuntu distributions are available at:
       sudo add-apt-repository ppa:armadito/armadito-av
 
 
-Note that this PPA is experimental and that graphical user interface is not yet packaged in a clean way.
+Notez que ce PPA est expérimental et que l'interface utilisateur graphique n'est pas encore emballée de manière propre.
 
 
 .. toctree::
