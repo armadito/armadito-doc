@@ -1,10 +1,10 @@
-Compilation on Linux
+Compilation sur Linux
 ====================
 
-On linux, Armadito AV sources are compiled using automake and autoconf to generate Makefiles.
-You can compile each part separately by ourself.
+Sur linux, Armadito AV sources sont compilées en utilisant automake et autoconf pour générer Makefiles.
+Vous pouvez compiler chaque partie séparément par nous-mêmes.
 
-Sources are publicly available on github.com, in separate git repositories :
+Les sources sont accessibles au public sur github.com, dans des dépôts git séparés:
 
 * Core : `<https://github.com/armadito/armadito-av>`_
 * Gui : `<https://github.com/armadito/armadito-gui>`_
