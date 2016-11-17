@@ -1,25 +1,25 @@
 Armadito ClamAV module 
 ======================
 
-**Armadito ClamAV** module corresponds to the integration of libclamav library within Armadito-av. 
+**Armadito ClamAV** module correspond à l'intégration de libclamav bibliothèque dans Armadito-av. 
 
-Sources are publicly available on github.com, you can get it with the following command :
+Les sources sont publiquement disponibles sur github.com, vous pouvez l'obtenir avec la commande suivante :
 
 ::
 
    $ git clone https://github.com/armadito/armadito-mod-clamav.git -b DEV
 
-Prerequisites
+Les prérequis
 -------------
 
-In order to compile Armadito ClamAV module, you need the following tools:
+Pour compiler le module Armadito ClamAV, vous avez besoin des outils suivants:
 
 - automake/autoconf
 - GNU make
 - C compiler
 - libclamav library and headers
 
-.. warning:: Be sure you have built **Armadito core** library before trying to build this module.
+.. warning:: Assurez-vous d'avoir **Armadito core** bibliothèque avant d'essayer de construire ce module.
 
 - Ubuntu: 
 
@@ -31,8 +31,8 @@ Configuration
 -------------
 
 
-To initialize the build using automake, autoconf and tools, a shell script 
-**autogen.sh** is provided to ease this step:
+Pour initialiser la construction en utilisant automake, autoconf et tools, un script shell 
+**autogen.sh** est prévu pour faciliter cette étape:
 
 ::
 
@@ -42,58 +42,58 @@ To initialize the build using automake, autoconf and tools, a shell script
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-This will generate the **Makefile.in** files and the **configure** script.
+Cela **Makefile.in** fichiers et les scripts de **configuration**.
 
-**configure** script takes the following useful options:
+**configure** script prend les options utiles suivantes:
 
-    --prefix=PREFIX         install architecture-independent files in PREFIX
+    --prefix=PREFIX         installe l'architecture-independent de PREFIX
                             [/usr/local]
     --enable-debug          enable debugging [default is yes]
 
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
-building a package and installing in system directories.
+Le répertoire ** PREFIX ** sera utilisé par ** make install **. Son utilisation est obligatoire, sauf si
+la construction d'un paquet et l'installation dans les répertoires système.
 
-libarmadito use the **pkg-config** utility to specify compiling options relative to 
-libarmadito. Since the **libarmadito.pc** specification file for **pkg-config** is not located
-in standard directory (usual **/usr/lib/pkgconfig**), invoking the configure script 
-must use the **PKG_CONFIG_PATH** environment variable.
+libarmadito utilise le **pkg-config** pour spécifier les options de compilation relatives à
+libarmadito. Depuis **libarmadito.pc** fichier de spécification pour **pkg-config** n'est pas situé
+dans le repertoire standard (habituel **/usr/lib/pkgconfig**), appel du script configure 
+doit utiliser le **PKG_CONFIG_PATH** environnement variable.
 
-Building in a separate directory is highly recommended, unless you really want
-to clobber the source tree with objects, libraries, binaries and other stuff.
+Bâtir dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
+à clobber le sourcetree avec des objets, des bibliothèques, des binaires et d'autres choses.
 
 ::
 
     $ mkdir /home/joebar/build/modules/clamav
 
-Typical invocation of the configure script is:
+L'appel typique du script de configuration est:
 
 ::
 
     $ /home/joebar/armadito-av/modules/clamav/configure --prefix=/home/joebar/install --enable-debug PKG_CONFIG_PATH=/home/joebar/install/lib/pkgconfig
 
-Note that the path specified in the value of **PKG_CONFIG_PATH** must be coherent
-with the **PREFIX** used in libarmadito installation (see **Armadito core** linux build section).
+Notez que le chemin spécifié dans la valeur de**PKG_CONFIG_PATH** doit être cohérent
+avec le **PREFIX** utilisé dans l'installation libarmadito (voir **Armadito core** section de construction linux).
 
 
-Building
+Bâtiment
 --------
 
-Once configured, build is easy:
+Une fois configuré, la construction est facile:
 
 ::
 
     $ make
 
 
-Installing
+Installation
 ----------
 
-After build, installation is done by:
+Après la construction, l'installation se fait par:
 
 ::
 
     $ make install
 
-This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
-directory defined at configure time.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires de la **PREFIX**
+défini au moment de la configuration. 
 
