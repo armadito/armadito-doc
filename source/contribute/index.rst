@@ -1,15 +1,15 @@
-Contribute
+Contribuer
 ==========
 
-As Armadito is an open source antivirus project, we greatly invite developers, engineers, partners, customers or anyone eager to boost technologies to collaborate in the software evolution.
+Comme Armadito est un projet antivirus open source, nous invitons grandement les développeurs, ingénieurs, partenaires, clients ou quiconque désireux de renforcer les technologies pour collaborer à l'évolution du logiciel.
 
-By becoming part of a Teclib’s community, you share your ideas and tips, exchange your knowledge and expertise with other members in order to fasten the development of Armadito’s solution. 
+En devenant membre d'une communauté de Teclib, vous partagez vos idées et astuces, échangez vos connaissances et votre expertise avec d'autres membres afin d'assurer le développement de la solution d'Armadito.
 
-You can participate to the project in different ways, such as:
+Vous pouvez participer au projet de différentes façons, par exemple:
 
-- installing Armadito antivirus
-- submitting bug reports
-- requesting new features
-- developing your own scan module
+- installation d'antivirus Armadito
+- soumettre des rapports de bogue
+- demander de nouvelles fonctionnalités
+- développer votre propre module de numérisation
 
 .. toctree::
