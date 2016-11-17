@@ -1,52 +1,53 @@
 Armadito gui
 ============
 
-Armadito gui rely on recent web technologies to provide a multi-plateform graphical user interface for Armadito antivirus. 
+Armadito gui s'appuie sur les technologies Web récentes pour fournir une interface graphique multiplateforme pour l'antivirus Armadito.
 
-Sources are publicly available on github.com, you can get it with the following command :
+Les sources sont accessibles au public sur github.com, vous pouvez l'obtenir avec la commande suivante:
 
 ::
 
    $ git clone https://github.com/armadito/armadito-gui.git -b DEV
 
-Prerequisites
+Prérequis
 -------------
 
-To run Armadito graphical user interface, you need:
+Pour exécuter l'interface utilisateur graphique Armadito, vous avez besoin de:
 
 - bower
 - node.js
 
 
-Installing node and bower
--------------------------
+Installation d'un noeud et d'une façade
+---------------------------------------
 
-Installations are done as root.
 
-Installing node.js:
+Les installations sont effectuées en tant que root.
+
+Installation node.js:
 
 ::
 
 	apt-get install nodejs-legacy
 
-Checking installation:
+Vérification de l'installation:
 
 ::
 
 	npm --version
 	1.4.21
 
-Installing bower (must be done as root too):
+Installation du bower (doit être effectué en tant que root aussi):
 
 ::
 
 	npm install -g bower
 
 
-Installing modules in source tree
+Installation de modules dans sourcetree
 ---------------------------------
 
-After cloning the repository, the source tree of the user interface must be configured :
+Après le clonage du référentiel, l'arborescence des sources de l'interface utilisateur doit être configurée:
 
 ::
 
@@ -57,8 +58,8 @@ After cloning the repository, the source tree of the user interface must be conf
 Configuration
 -------------
 
-Once git repo cloned, you need to initialize the build using automake, autoconf and tools.
-A shell script **autogen.sh** is provided to ease this step:
+Une fois git repo cloné, vous devez initialiser la construction en utilisant automake, autoconf et des outils.
+Un script shell ** autogen.sh ** est fourni pour faciliter cette étape:
 
 ::
 
@@ -67,72 +68,69 @@ A shell script **autogen.sh** is provided to ease this step:
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-This will generate the **Makefile.in** files and the **configure** script.
+Cela générera les fichiers ** Makefile.in ** et le script ** configure **.
 
-**configure** script takes the following useful options:
+** configure ** script prend les options utiles suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
     
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
-building a package and installing in system directories, since building the
-scanning modules and the graphical user interface will need a libarmadito properly
-installed.
+Le répertoire ** PREFIX ** sera utilisé par ** make install **. Son utilisation est obligatoire, à moins de construire un paquet et d'installer dans les répertoires système, puisque les modules de balayage et l'interface utilisateur graphique aura besoin d'un libarmadito correctement installé.
 
-Typical invocation of the configure script is:
+L'appel typique du script de configuration est:
 
 ::
 
     $ /home/joebar/armadito-av/gui/configure --prefix=/home/joebar/install
 
-Building
+Le construction
 --------
 
-Once configured, build is easy:
+Une fois configuré, la construction est facile:
 
 ::
 
     $ make
 
 
-Installing
+Installation
 ----------
 
-After build, installation is done by:
+
+Après la construction, l'installation se fait par:
 
 ::
 
     $ make install
 
-This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
-directory defined at configure time.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du ** PREFIX **
+Répertoire défini au moment de la configuration.
 
-Running the interface
+Exécution de l'interface
 ---------------------
 
-First, the Armadito daemon must be launched. Refer to Armadito documentation for instructions.
+Tout d'abord, le démon Armadillo doit être lancé. Reportez-vous à la documentation d'Armadillo pour obtenir des instructions.
+Ouvrez votre navigateur Web préféré et accédez à l'URL suivante: http://localhost:8888/app/index.html
 
-Open your favorite web browser and got to the following URL : http://localhost:8888/app/index.html
-
-Debugging the interface
+Débogage de l'interface
 -----------------------
 
-Once the interface is launched:
+Une fois l'interface lancée:
 
-- right-click in the window to display debug menu and select "Inspect" or tap F12
-- in the inspector window, select the "console" tab
+- cliquez avec le bouton droit de la souris dans la fenêtre pour afficher le menu de débogage et sélectionnez «Inspecter» ou appuyez sur F12
+- dans la fenêtre de l'inspecteur, sélectionnez l'onglet "console"
 
-Build with grunt
+Construire avec grunt
 ----------------
 
-Install grunt :
+Installer grunt :
 
 :: 
 
          npm install -g grunt-cli
 
-Run `grunt` for building and `grunt serve` for preview.
+Exécuter `grunt` pour la construction et` grunt servir `pour l'aperçu.
 
-You can use "--force" if you want to build with warnings.
+Vous pouvez utiliser "--force" si vous voulez construire avec des avertissements.
 
-.. note:: This project is generated with [yo angular generator] version 0.15.1.
+.. note:: Ce projet est généré avec [yo angular generator] version 0.15.1.
 
