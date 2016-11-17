@@ -1,51 +1,50 @@
 Armadito ClamAV module 
 ======================
 
-Armadito ClamAV module corresponds to the integration of libclamav library within Armadito-av. 
-On Windows, after build, a library called **clamav_a6o.dll** will be generated. It aims to interact with both **libarmadito.dll** and **libclamav.dll**.
+Le module Armadito ClamAV correspond à l'intégration de la bibliothèque libclamav dans Armadito-av.
+Sous Windows, après la construction, une bibliothèque appelée ** clamav_a6o.dll ** sera générée. Il vise à interagir avec ** libarmadito.dll ** et ** libclamav.dll **.
 
 
-Prerequisites
+Conditions préalables
 -------------
 
-* Microsoft Visual Studio 2013 (Community edition or more)
-* Armadito windows dependencies archive (deps.zip)
+* Microsoft Visual Studio 2013 (édition communautaire ou plus)
+* Armadito fenêtres dépendances archives (deps.zip)
 
-Uncompress **deps-x.zip** in armadito-av sources root directory. You should have then these exact dependencies paths :
+Uncompress ** deps-x.zip ** dans le répertoire racine des sources armadito-av. Vous devriez avoir ces chemins de dépendances exactes:
 
 ::
     
    SOMEWHERE\armadito-av\deps\glib\...
    SOMEWHERE\armadito-av\deps\json-c\...
 
-Build
+Construire
 -----
-
-Open the armadito-av VS solution at location : 
+Ouvrez la solution armadillo-av VS à l'emplacement:
  
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\Armadito-AV.sln
 
-Then, select **modules\\clamav_a6o** project in Solution Explorer and build it. 
+Ensuite, sélectionnez le projet ** modules \\ clamav_a6o ** dans l'Explorateur de solutions et construisez-le.
 
 
-Out
+En dehors
 ---
 
-Out folder could be one of these :
+Out dossier pourrait être l'un de ces:
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Debug
 
-or 
+ou 
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Release
 
-If build has been successful, you should have these files :
+Si build a été un succès, vous devriez avoir ces fichiers:
 
 ::
 
