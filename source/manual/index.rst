@@ -1,4 +1,4 @@
-User Manual
+Manuel de l'utilisateur
 ===========
 
 .. toctree::
