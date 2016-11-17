@@ -1,32 +1,31 @@
-Compilation on Windows
+Compilation sur Windows
 ======================
 
-.. danger:: Graphical user interface is under redesign and new version is not yet ported to Windows. That will be fixed as soon as possible.
+.. danger:: L'interface utilisateur graphique est en cours de refonte et la nouvelle version n'est pas encore portée à Windows. Ce sera réglé dès que possible.
 
-On Windows, you can compile Armadito AV sources with Visual Studio.
-This has been tested with Visual Studio 2013. 
-You might have to apply some modifications regarding to which Visual Studio's version you use. 
+Sous Windows, vous pouvez compiler des sources Armadito AV avec Visual Studio.
+Cela a été testé avec Visual Studio 2013.
+Vous devrez peut-être appliquer certaines modifications concernant la version de Visual Studio que vous utilisez.
 
-Tested on : Windows 7 64 bit with Service Pack 1.
+Testé sur: Windows 7 64 bits avec Service Pack 1.
 
-Armadito solution for Visual Studio is divided in the following subprojects :
+Armadito solution pour Visual Studio est divisé dans les sous-projets suivants:
 
-- Driver
-	- ArmaditoGuard (driver sources)
-	- ArmaditoGuard Package (driver package)
+- Chauffeur
+	- ArmaditoGuard (sources pilotes)
+	- Forfait ArmaditoGuard (forfait conducteur)
 - Libarmadito
-	- libarmadito (armadito core library)
+	- libarmadito (bibliothèque principale d'armadito)
 - Modules
-	- clamav_a6o (clamav module)
-	- moduleH1	(heuristic module)
-	- modulePDF (PDF module)
+	- clamav_a6o (module clamav)
+	- moduleH1 (module heuristique)
+	- modulePDF (module PDF)
 - Service
-	- ArmaditoSvc (analysis service)
-- Setup
-	- ArmaditoGuard-setup (driver installation)
-	- Armadito-db-setup (setup project for module databases)
-	- Armadito-setup (setup project for armadito)
-
+	- ArmaditoSvc (service d'analyse)
+- Installer
+	- ArmaditoGuard-setup (installation du pilote)
+	- Armadito-db-setup (projet d'installation pour les bases de données des modules)
+	- Armadito-setup (projet d'installation pour armadito)
 .. toctree::
 
    core.rst
