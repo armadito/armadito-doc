@@ -1,25 +1,25 @@
 Armadito module PDF
 ===================
 
-Armadito module PDF is an heuristic module for PDF documents analysis.
-On Windows, after build, a library called **modulePDF.dll** will be generated.
+Armadito module PDF est un module heuristique pour l'analyse de documents PDF.
+Sur Windows, après la construction, une bibliothèque appelée ** modulePDF.dll ** sera générée.
 
 
-Prerequisites
+Conditions préalables
 -------------
 
-* Microsoft Visual Studio 2013 (Community edition or more)
-* Armadito windows dependencies archive (deps.zip)
-* Armadito PDF sources from github repository
+* Microsoft Visual Studio 2013 (édition communautaire ou plus)
+* Armadito fenêtres dépendances archives (deps.zip)
+* Armadito PDF sources de github référentiel
 
-Uncompress **deps-x.zip** in armadito-av sources root directory. You should have then these exact dependencies paths :
+Uncompress ** deps-x.zip ** dans le répertoire racine des sources armadito-av. Vous devriez avoir ces chemins de dépendances exactes:
 
 ::
     
    SOMEWHERE\armadito-av\deps\glib\...
    SOMEWHERE\armadito-av\deps\json-c\...
 
-In order to get Armadito PDF sources, you have to clone the armadito-pdf public repository :
+Afin d'obtenir des sources PDF Armadillo, vous devez cloner le dépôt public armadillo-pdf:
 
 ::
    
@@ -27,34 +27,34 @@ In order to get Armadito PDF sources, you have to clone the armadito-pdf public 
    git clone https://github.com/armadito/armadito-pdf -b DEV
 
 
-Build
+Construire
 -----
 
-Open the armadito-av VS solution at location : 
+Ouvrez la solution armadillo-av VS à l'emplacement:
  
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\Armadito-AV.sln
 
-Then, select **modules\\modulePDF** project in Solution Explorer and build it. 
+Ensuite, sélectionnez le module ** modules \\ modulePDF ** dans l'Explorateur de solutions et créez-le.
 
 
-Out
+En dehors
 ---
 
-Out folder could be one of these :
+Out dossier pourrait être l'un de ces:
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Debug
 
-or 
+ou 
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Release
 
-If build has been successful, you should have this file :
+Si build a été un succès, vous devriez avoir ce fichier:
 
 ::
 
