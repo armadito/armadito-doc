@@ -1,7 +1,7 @@
 .. Armadito documentation master file, created by
    sphinx-quickstart on Tue Apr 12 17:35:15 2016.
 
-.. image:: ../armadito_logo.png
+.. image:: ../images/armadito_logo.png
    :height: 78px
    :width: 78px
    :alt: armadito logo
@@ -22,6 +22,5 @@ Armadito Antivirus est un antivirus open source, qui protège vos ordinateurs et
    configuration/index.rst
    contribute/index.rst
    licensing/index.rst
-..   faq/index.rst
-..   screenshots/index.rst
-
+   faq/index.rst
+   screenshots/index.rst

@@ -1,20 +1,20 @@
 Captures d'écran
-===========
-Voici quelques captures d'écran :
+================
 
 Le tableau de bord
------------
+------------------
 
-img
+.. image:: ../../images/Status_tab.png
+   :alt: Status tab
 
 L'interface de scan
------------
+-------------------
 
-img
+.. image:: ../../images/Scan_tab.png
+   :alt: Scan tab
 
 Le journal
 ----------
 
-img
-
-.. toctree::
+.. image:: ../../images/Journal_tab.png
+   :alt: Journal tab
