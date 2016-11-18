@@ -1,4 +1,0 @@
-External Resources
-==================
-
-.. toctree::
