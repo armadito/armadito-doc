@@ -11,7 +11,7 @@
 Armadito Antivirus
 ===================
 
-Armadito Antivirus is an open-source antivirus that protects your computers and servers from malwares and viruses. It includes classical signature-based malware detection and provides innovative heuristic detection modules for binaries (MS-Windows and GNU/Linux) and for PDF documents.
+Armadito Antivirus est an open-source antivirus that protects your computers and servers from malwares and viruses. It includes classical signature-based malware detection and provides innovative heuristic detection modules for binaries (MS-Windows and GNU/Linux) and for PDF documents.
 
 .. toctree::
    :maxdepth: 2
