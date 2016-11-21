@@ -1,7 +1,7 @@
 Compilation sur Windows
 =======================
 
-.. danger:: L'interface utilisateur graphique est en cours de refonte et la nouvelle version n'est pas encore portée à Windows. Ce sera réglé dès que possible.
+.. danger:: L'interface graphique est en cours de refonte et la nouvelle version n'est pas encore portée pour Windows.
 
 Sous Windows, vous pouvez compiler des sources Armadito AV avec Visual Studio.
 Cela a été testé avec Visual Studio 2013.
@@ -9,13 +9,13 @@ Vous devrez peut-être appliquer certaines modifications concernant la version d
 
 Testé sur: Windows 7 64 bits avec Service Pack 1.
 
-Armadito solution pour Visual Studio est divisé dans les sous-projets suivants:
+La solution Armadito pour Visual Studio est constitué des sous-projets suivants:
 
-- Chauffeur
-	- ArmaditoGuard (sources pilotes)
-	- Forfait ArmaditoGuard (forfait conducteur)
+- Driver
+	- ArmaditoGuard (sources)
+	- ArmaditoGuard Package (installeur)
 - Libarmadito
-	- libarmadito (bibliothèque principale d'armadito)
+	- libarmadito (Armadito core)
 - Modules
 	- clamav_a6o (module clamav)
 	- moduleH1 (module heuristique)
@@ -23,7 +23,7 @@ Armadito solution pour Visual Studio est divisé dans les sous-projets suivants:
 - Service
 	- ArmaditoSvc (service d'analyse)
 - Installer
-	- ArmaditoGuard-setup (installation du pilote)
+	- ArmaditoGuard-setup (installation du driver)
 	- Armadito-db-setup (projet d'installation pour les bases de données des modules)
 	- Armadito-setup (projet d'installation pour armadito)
 
