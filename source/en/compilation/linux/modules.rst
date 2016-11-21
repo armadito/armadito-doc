@@ -1,13 +1,10 @@
-Armadito ClamAV module
-======================
+Armadito modules
+================
 
-**Armadito ClamAV** module corresponds to the integration of libclamav library within Armadito-av.
+Building is quite the same for each Armadito Antivirus' analysis modules.
+Build/Install all modules is not mandatory. Everyone has the choice of which modules to use within Armadito Antivirus.
 
-Sources are publicly available on github.com, you can get it with the following command :
-
-::
-
-   $ git clone https://github.com/armadito/armadito-mod-clamav.git -b DEV
+.. warning:: Be sure you have built **Armadito core** library before trying to build any of these modules.
 
 Prerequisites
 -------------
@@ -17,22 +14,40 @@ In order to compile Armadito ClamAV module, you need the following tools:
 - automake/autoconf
 - GNU make
 - C compiler
-- libclamav library and headers
+- libarmadito (core)
 
-.. warning:: Be sure you have built **Armadito core** library before trying to build this module.
 
-- Ubuntu:
+Some modules have more external dependencies :
+
+armadito-mod-clamav :
+ - libclamav library and headers. Ubuntu : libclamav-dev
+
+armadito-mod-yara :
+ - libyara library and headers. Ubuntu : libyara-dev
+
+armadito-mod-h1 :
+ - pas de dépendances supplémentaires
+
+armadito-mod-pdf :
+ - pas de dépendances supplémentaires
+
+
+Clone
+-----
 
 ::
 
-     apt-get install libclamav-dev
+    git clone -b DEV https://github.com/armadito/armadito-mod-clamav.git
+    git clone -b DEV https://github.com/armadito/armadito-mod-yara.git
+    git clone -b DEV https://github.com/armadito/armadito-mod-h1.git
+    git clone -b DEV https://github.com/armadito/armadito-mod-pdf.git
+
 
 Configuration
 -------------
 
-
 To initialize the build using automake, autoconf and tools, a shell script
-**autogen.sh** is provided to ease this step:
+**autogen.sh** is provided to ease this step :
 
 ::
 
@@ -69,7 +84,7 @@ Typical invocation of the configure script is:
 
 ::
 
-    $ /home/joebar/armadito-av/modules/clamav/configure --prefix=/home/joebar/install --enable-debug PKG_CONFIG_PATH=/home/joebar/install/lib/pkgconfig
+    $ REPO_GIT/configure --prefix=/home/joebar/install --enable-debug PKG_CONFIG_PATH=/home/joebar/install/lib/pkgconfig
 
 Note that the path specified in the value of **PKG_CONFIG_PATH** must be coherent
 with the **PREFIX** used in libarmadito installation (see **Armadito core** linux build section).
