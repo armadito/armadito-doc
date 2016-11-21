@@ -1,10 +1,11 @@
 Licences
 ========
 
-Armadillo antivirus peut être divisé en sous-projets, qui sont les suivants:
+Armadito antivirus peut être divisé en plusieurs sous-projets, qui sont les suivants:
 
 - Armadito core
-- Armadito gui
+- Armadito web ui
+- Armadito systray ui
 - Armadito windows driver
 - Armadito module clamav
 - Armadito module PDF
@@ -12,37 +13,43 @@ Armadillo antivirus peut être divisé en sous-projets, qui sont les suivants:
 
 **Armadito core**
 
-* **Description** : Core library in C language.
+* **Description** : Librairie principale de l'Antivirus.
 * **License** : `LGPLv3 <https://www.gnu.org/licenses/license-list.html#LGPLv3>`_
 * **Github** : `armadito-av <https://github.com/armadito/armadito-av>`_
 
-**Armadito gui**
+**Armadito web ui**
 
-* **Description** : Graphical User Interface in Node-webkit with angularJS.
+* **Description** : Interface graphique en angularJS.
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
-* **Github** : `armadito-gui <https://github.com/armadito/armadito-gui>`_
+* **Github** : `armadito-web-ui <https://github.com/armadito/armadito-web-ui>`_
+
+**Armadito systray ui**
+
+* **Description** : Intégration dans la zone de notification.
+* **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
+* **Github** : `armadito-systray-ui <https://github.com/armadito/armadito-systray-ui>`_
 
 **Armadito windows driver**
 
-* **Description** : On-access scan Windows implementation in C using Windows Driver Kit.
+* **Description** : Driver pour l'analyse en temps réel sur Windows.
 * **License** : `MS-PL <https://opensource.org/licenses/MS-PL>`_
 * **Github** : `armadito-windows-driver <https://github.com/armadito/armadito-windows-driver>`_
 
 **Armadito module clamav**
 
-* **Description** : Scan module using clamav library.
+* **Description** : Module d'analyse utilisant le moteur Clamav.
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
 * **Github** : `armadito-mod-clamav <https://github.com/armadito/armadito-mod-clamav>`_
 
 **Armadito module PDF**
 
-* **Description** : Scan module used especially for PDFs analysis.
+* **Description** : Module d'analyse des fichiers PDFs.
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
 * **Github** : `armadito-mod-pdf <https://github.com/armadito/armadito-mod-pdf>`_
 
 **Armadito module H1**
 
-* **Description** : Heuristic scan module focusing on ELF/PE analysis. Based on work by the DAVFI project (http://www.davfi.fr/)
+* **Description** : Module d'analyse heuristique des fichiers binaires (PE/ELF). Basé sur le travail du projet DAVFI (http://www.davfi.fr/)
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
 * **Github** : `armadito-mod-h1 <https://github.com/armadito/armadito-mod-h1>`_
 

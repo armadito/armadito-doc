@@ -1,4 +1,4 @@
-Foire Aux Questions
-===================
+FAQ
+===
 
 .. toctree::
