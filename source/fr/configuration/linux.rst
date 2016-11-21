@@ -1,19 +1,18 @@
 Configuration sous Linux
 ========================
 
-Armadillo AVs configuration sur Linux est stocké dans deux fichiers:
+La configuration de l'antivirus sur Linux est stocké dans deux fichiers:
 
-* /etc/armadillo/armadillo.conf
+* /etc/armadito/armadito.conf
 * /etc/armadito/conf.d/on-access-linux.conf
 
-.. note:: Si vous avez compilé à partir de sources, ces fichiers de configuration se trouvent dans votre répertoire PREFIX.
+.. note:: Si vous avez compilé à partir de sources, ces fichiers de configuration se trouvent dans votre répertoire **PREFIX**.
 
-.. warning:: La configuration présentée dans ce document est utilisée uniquement à des fins d'illustration.
 
 Analyse à la demande
 ~~~~~~~~~~~~~~~~~~~~
 
-Vous pouvez configurer le fonctionnement de l'analyse à la demande dans ** / etc / armadito / armadito.conf **:
+Vous pouvez configurer le fonctionnement de l'analyse à la demande dans **/etc/armadito/armadito.conf**:
 
 ::
 
@@ -26,16 +25,16 @@ Vous pouvez configurer le fonctionnement de l'analyse à la demande dans ** / et
 * **white-list-dir** : Liste des répertoires exclus de l'analyse à la demande.
 * **mime-types** : Types de fichiers MIME analysés lors d'une analyse à la demande.
 * **modules** : Modules utilisés par l'analyse à la demande.
-* **max-size** : Taille maximale des fichiers numérisés lors de l'analyse à la demande.
-
-Numérisation à l'accès
-~~~~~~~~~~~~~~~~~~~~~~
+* **max-size** : Taille maximale des fichiers scannés lors de l'analyse à la demande.
 
 
-L'analyse à l'accès d'Armadito AV s'appuie principalement sur l'API fanotify.
+Analyse en temps réel
+~~~~~~~~~~~~~~~~~~~~~
+
+L'analyse en temps réel d'Armadito AV s'appuie principalement sur l'API fanotify.
 Vous pouvez trouver plus d'informations sur la façon dont il fonctionne en lisant la page de manuel: `fanotify man7 <http://man7.org/linux/man-pages/man7/fanotify.7.html>` _.
 
-La configuration de l'analyse à l'accès peut être effectuée en modifiant ** / etc / armadito / conf.d / on-access-linux.conf **:
+La configuration peut être effectuée en modifiant **/etc/armadito/conf.d/on-access-linux.conf** :
 
 ::
 
@@ -51,7 +50,7 @@ La configuration de l'analyse à l'accès peut être effectuée en modifiant ** 
    max-size = 10048576
 
 
-* **activer** : Activez (1) ou désactivez (0) l'analyse à l'accès.
+* **enable** : Activez (1) ou désactivez (0) l'analyse à l'accès.
 * **enable-permission**: validation (1) ou désactivation (0) vérification d'autorisation.
 
    * Si **activé**, les fichiers détectés comme malveillants seront bloqués par Armadito AV.
@@ -60,31 +59,31 @@ La configuration de l'analyse à l'accès peut être effectuée en modifiant ** 
 
   * Si **activé**, des points de montage de supports amovibles seront ajoutés à la volée à la liste de surveillance.
 * **mount**: liste des répertoires qui seront surveillés par des points de montage. C'est à dire. En utilisant FAN_MARK_MOUNT.
-* **répertoire**: liste des répertoires qui seront surveillés par un marquage récursif de tous les sous-répertoires.
+* **directory**: liste des répertoires qui seront surveillés par un marquage récursif de tous les sous-répertoires.
 * **white-list-dir**: liste des répertoires exclus de l'analyse à la demande.
 * **mime-types**: Types de fichiers MIME analysés lors d'une analyse à la demande.
 * **modules**: Modules utilisés par l'analyse à la demande.
-* **max-size**: Taille maximale des fichiers numérisés lors d'une analyse à la demande.
+* **max-size**: Taille maximale des fichiers scannés lors d'une analyse à la demande.
 
 
 Alertes de virus
 ~~~~~~~~~~~~~~~~
 
-Lorsqu'un virus est détecté par Armadito AV, un rapport d'alerte est généré et stocké dans un emplacement défini.
-Cela peut être configuré en modifiant **/ etc / armadito / armadito.conf**:
+Lorsqu'un contenu malicieux est détecté par Armadito AV, un rapport d'alerte est généré et stocké dans un emplacement défini dans la configuration.
+Cela peut être configuré en modifiant **/etc/armadito/armadito.conf** :
 
 ::
 
    [alert]
    alert-dir = "/var/spool/armadito"
 
-* **alert-dir** : Dans lequel les alertes d'analyse seront stockées.
+* **alert-dir** : dossier dans lequel les alertes seront stockées.
 
 Quarantaine
 ~~~~~~~~~~~
 
 Pour isoler les fichiers infectés, Armadito AV peut placer les fichiers détectés en quarantaine.
-**/ etc / armadito / armadito.conf** contient la configuration de la quarantaine:
+**/etc/armadito/armadito.conf** contient la configuration de la quarantaine:
 
 ::
 

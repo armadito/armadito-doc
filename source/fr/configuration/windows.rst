@@ -1,11 +1,12 @@
 Configuration sur Windows
 ========================
 
-Armadillo AVs configuration sur Windows peut être modifié dans le fichier suivant:
+La configuration de l'antivirus sur Windows peut être modifié dans le fichier suivant:
 
 * <**install_dir**>\\Armadito-av\\conf\\armadito.conf
 
 .. note:: By default, **install_dir** is *C:\\Program Files\\Teclib*.
+
 
 Analyse à la demande
 ~~~~~~~~~~~~~~~~~~~~
@@ -26,10 +27,10 @@ Vous pouvez configurer le fonctionnement de l'analyse à la demande **<install_d
 * **max-size** : Taille maximale des fichiers numérisés lors de l'analyse à la demande.
 
 
-Numérisation à l'accès
-~~~~~~~~~~~~~~~~~~~~~~
+Analyse en temps réel
+~~~~~~~~~~~~~~~~~~~~~
 
-Vous pouvez configurer le fonctionnement de l'analyse en **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse dans **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
 
 ::
 
@@ -38,9 +39,9 @@ Vous pouvez configurer le fonctionnement de l'analyse en **<install_dir>\\Armadi
    mime-types="*"
    modules="clamav"
 
-* **activer**: activer (1) ou désactiver (0) le balayage à l'accès.
-* **mime-types**: Types de fichiers MIME numérisés lors de l'analyse à l'accès.
-* **modules**: Modules utilisés par le scan à l'accès.
+* **enable**: activer (1) ou désactiver (0) la protection en temps réel.
+* **mime-types**: Types de fichiers MIME numérisés lors de l'analyse en temps réel.
+* **modules**: Modules utilisés par la protection en temps réel.
 
 
 Alertes de virus
@@ -52,7 +53,7 @@ Quarantaine
 ~~~~~~~~~~~
 
 Pour isoler les fichiers infectés, Armadito AV peut placer les fichiers détectés en quarantaine.
-**<dir_installation>\\Armadito-av\\conf\\armadito.conf** contient la configuration de la quarantaine:
+**<dir_installation>\\Armadito-av\\conf\\armadito.conf** contient la configuration de la quarantaine :
 
 ::
 
@@ -60,8 +61,8 @@ Pour isoler les fichiers infectés, Armadito AV peut placer les fichiers détect
    enable = 0
    quarantine-dir = "quarantine"
 
-* **activer** : Activer (1) ou désactiver (0) la quarantaine.
-* **Quarantine-dir** : Sous-répertoire où seront déplacés les fichiers mis en quarantaine.
+* **enable** : Activer (1) ou désactiver (0) la quarantaine.
+* **quarantine-dir** : Sous-répertoire où seront déplacés les fichiers mis en quarantaine.
 
 
 .. toctree::
