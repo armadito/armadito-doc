@@ -1,7 +1,7 @@
-Armadito ClamAV module 
+Armadito ClamAV module
 ======================
 
-**Armadito ClamAV** module corresponds to the integration of libclamav library within Armadito-av. 
+**Armadito ClamAV** module corresponds to the integration of libclamav library within Armadito-av.
 
 Sources are publicly available on github.com, you can get it with the following command :
 
@@ -21,7 +21,7 @@ In order to compile Armadito ClamAV module, you need the following tools:
 
 .. warning:: Be sure you have built **Armadito core** library before trying to build this module.
 
-- Ubuntu: 
+- Ubuntu:
 
 ::
 
@@ -31,7 +31,7 @@ Configuration
 -------------
 
 
-To initialize the build using automake, autoconf and tools, a shell script 
+To initialize the build using automake, autoconf and tools, a shell script
 **autogen.sh** is provided to ease this step:
 
 ::
@@ -50,12 +50,12 @@ This will generate the **Makefile.in** files and the **configure** script.
                             [/usr/local]
     --enable-debug          enable debugging [default is yes]
 
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
+The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless
 building a package and installing in system directories.
 
-libarmadito use the **pkg-config** utility to specify compiling options relative to 
+libarmadito use the **pkg-config** utility to specify compiling options relative to
 libarmadito. Since the **libarmadito.pc** specification file for **pkg-config** is not located
-in standard directory (usual **/usr/lib/pkgconfig**), invoking the configure script 
+in standard directory (usual **/usr/lib/pkgconfig**), invoking the configure script
 must use the **PKG_CONFIG_PATH** environment variable.
 
 Building in a separate directory is highly recommended, unless you really want

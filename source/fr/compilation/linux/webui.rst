@@ -25,8 +25,6 @@ Installation de bower (doit être effectué en tant que root aussi):
 Installation des dépendances
 ----------------------------
 
-Après le clonage du référentiel, l'arborescence des sources de l'interface utilisateur doit être configurée:
-
 ::
 
 	cd /home/joebar/armadito-web-ui
@@ -36,7 +34,7 @@ Configuration
 -------------
 
 Une fois le repo cloné, vous devez initialiser la compilation en utilisant automake et autoconf.
-Un script shell ** autogen.sh ** est fourni pour faciliter cette étape:
+Un script shell **autogen.sh** est fourni pour faciliter cette étape:
 
 ::
 
@@ -45,13 +43,13 @@ Un script shell ** autogen.sh ** est fourni pour faciliter cette étape:
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-Cela générera les fichiers ** Makefile.in ** et le script ** configure **.
+Cela générera les fichiers **Makefile.in** et le script **configure**.
 
 ** configure ** script prend les options utiles suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
 
-Le répertoire ** PREFIX ** sera utilisé par ** make install **.
+Le répertoire **PREFIX** sera utilisé par **make install**.
 Son utilisation est obligatoire, à moins de construire un paquet et d'installer dans les répertoires système.
 
 L'appel typique du script de configuration est:
@@ -64,8 +62,6 @@ L'appel typique du script de configuration est:
 Compilation
 -----------
 
-Pour compiler :
-
 ::
 
     $ make
@@ -74,13 +70,11 @@ Pour compiler :
 Installation
 ------------
 
-Pour installer :
-
 ::
 
     $ make install
 
-Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du ** PREFIX ** défini au moment de la configuration.
+Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires du **PREFIX** défini au moment de la configuration.
 
 
 Lancement de l'interface
@@ -88,7 +82,9 @@ Lancement de l'interface
 
 Tout d'abord, le daemon Armadito doit être lancé.
 
-Ouvrez votre navigateur Web préféré et accédez à l'URL suivante: http://localhost:8888/app/index.html
+Ouvrez votre navigateur Web et accédez à l'URL suivante :
+
+`<http://localhost:8888/app/index.html>`_
 
 
 Débogage de l'interface

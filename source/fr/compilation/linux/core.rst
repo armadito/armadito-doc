@@ -51,7 +51,7 @@ Un script shell **autogen.sh** est prévu pour faciliter cette étape :
 
 Cela générera les fichiers **Makefile.in** et **configure**.
 
-**configure** script prend les options utiles suivantes:
+**configure** script prend les options suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
     --enable-debug          enable debugging [default is yes]
