@@ -1,7 +1,7 @@
-Armadito ClamAV module 
+Armadito ClamAV module
 ======================
 
-**Armadito ClamAV** module correspond à l'intégration de libclamav bibliothèque dans Armadito-av. 
+**Armadito ClamAV** module correspond à l'intégration de libclamav bibliothèque dans Armadito-av.
 
 Les sources sont publiquement disponibles sur github.com, vous pouvez l'obtenir avec la commande suivante :
 
@@ -19,9 +19,9 @@ Pour compiler le module Armadito ClamAV, vous avez besoin des outils suivants:
 - C compiler
 - libclamav library and headers
 
-.. warning:: Assurez-vous d'avoir **Armadito core** bibliothèque avant d'essayer de construire ce module.
+.. warning:: Assurez-vous d'avoir compiler **libarmadito** avant de compiler ce module.
 
-- Ubuntu: 
+- Ubuntu:
 
 ::
 
@@ -31,8 +31,8 @@ Configuration
 -------------
 
 
-Pour initialiser la construction en utilisant automake, autoconf et tools, un script shell 
-**autogen.sh** est prévu pour faciliter cette étape:
+Une fois le repo cloné, vous devez initialiser la compilation en utilisant automake et autoconf. Un script shell
+**autogen.sh** est d'ailleurs prévu pour faciliter cette étape:
 
 ::
 
@@ -55,7 +55,7 @@ la construction d'un paquet et l'installation dans les répertoires système.
 
 libarmadito utilise le **pkg-config** pour spécifier les options de compilation relatives à
 libarmadito. Depuis **libarmadito.pc** fichier de spécification pour **pkg-config** n'est pas situé
-dans le repertoire standard (habituel **/usr/lib/pkgconfig**), appel du script configure 
+dans le repertoire standard (habituel **/usr/lib/pkgconfig**), appel du script configure
 doit utiliser le **PKG_CONFIG_PATH** environnement variable.
 
 Bâtir dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
@@ -95,5 +95,5 @@ Après la construction, l'installation se fait par:
     $ make install
 
 Cela installera les bibliothèques, les outils, les fichiers d'en-tête ... dans les sous-répertoires de la **PREFIX**
-défini au moment de la configuration. 
+défini au moment de la configuration.
 

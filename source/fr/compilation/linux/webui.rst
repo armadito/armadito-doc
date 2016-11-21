@@ -2,7 +2,7 @@ Armadito WebUI
 ==============
 
 Armadito WebUI s'appuie sur les technologies Web récentes pour fournir une interface graphique multiplateforme pour l'antivirus Armadito.
-Les sources sont accessibles au public sur github.com, vous pouvez l'obtenir avec la commande suivante:
+Les sources sont accessibles au public sur github.com, vous pouvez les obtenir avec la commande suivante:
 
 ::
 
@@ -35,7 +35,7 @@ Après le clonage du référentiel, l'arborescence des sources de l'interface ut
 Configuration
 -------------
 
-Une fois le repo cloné, vous devez initialiser la construction en utilisant automake, autoconf et des outils.
+Une fois le repo cloné, vous devez initialiser la compilation en utilisant automake et autoconf.
 Un script shell ** autogen.sh ** est fourni pour faciliter cette étape:
 
 ::

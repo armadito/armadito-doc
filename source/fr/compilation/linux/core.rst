@@ -1,9 +1,9 @@
 Armadito core
 =============
 
-**Armadito core** correspond à la librairie libarmadito. Les symboles exportés depuis cette bibliothèque permettent à toutes les bibliothèques de modules d'utiliser les mêmes API.
+**Armadito core** correspond à la librairie *libarmadito*. Les symboles exportés depuis cette librairie permettent à tous les modules d'utiliser la même API.
 
-Les sources sont accessibles au public sur github.com, vous pouvez l'obtenir avec la commande suivante:
+Les sources sont accessibles au public sur github.com, vous pouvez les obtenir avec la commande suivante:
 
 ::
 
@@ -37,7 +37,7 @@ Pour installer les en-têtes nécessaires:
 Configuration
 -------------
 
-Une fois git repo cloné, vous devez initialiser la construction en utilisant automake, autoconf et des outils.
+Une fois le repo cloné, vous devez initialiser la compilation en utilisant automake et autoconf.
 Un script shell **autogen.sh** est prévu pour faciliter cette étape :
 
 ::
@@ -49,20 +49,18 @@ Un script shell **autogen.sh** est prévu pour faciliter cette étape :
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
 
-Cela **Makefile.in** fichiers et les **configure** script.
+Cela générera les fichiers **Makefile.in** et **configure**.
 
 **configure** script prend les options utiles suivantes:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
     --enable-debug          enable debugging [default is yes]
 
-Le répertoire ** PREFIX ** sera utilisé par ** make install **. Son utilisation est obligatoire, sauf si
-La construction d'un paquetage et l'installation dans les répertoires système,
-Les modules de balayage et l'interface utilisateur graphique aura besoin d'un libarmadito correctement
-Installé.
+Le répertoire ** PREFIX ** sera utilisé par ** make install **.
+L'utilisation du PREFIX est préférable étant donné que les modules et l'interface graphique ont besoin de l'installation préalable de libarmadito.
 
-Bâtir dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
-Pour gifler l'arbre source avec des objets, des bibliothèques, des binaires et d'autres choses.
+Compiler dans un répertoire distinct est fortement recommandé, sauf si vous voulez vraiment
+ajouter dans les sources des objets, des bibliothèques, des binaires et d'autres choses.
 
 ::
 
@@ -75,10 +73,10 @@ L'appel typique du script de configuration est:
     $ /home/joebar/armadito-av/libarmadito/configure --prefix=/home/joebar/install --enable-debug
 
 
-Construction
-------------
+Compilation
+-----------
 
-Une fois configuré, la construction est facile:
+Une fois configuré, la compilation est facile:
 
 ::
 
@@ -87,7 +85,7 @@ Une fois configuré, la construction est facile:
 Installation
 ------------
 
-Après la construction, l'installation se fait par:
+Après la compilation, l'installation se fait par:
 
 ::
 
