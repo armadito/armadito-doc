@@ -6,7 +6,7 @@ Les sources sont accessibles au public sur github.com, vous pouvez les obtenir a
 
 ::
 
-   $ git clone https://github.com/armadito/armadito-web-ui.git -b DEV
+    $ git clone https://github.com/armadito/armadito-web-ui.git -b DEV
 
 Prérequis
 ---------
@@ -19,7 +19,7 @@ Installation de bower (doit être effectué en tant que root aussi):
 
 ::
 
-	npm install -g bower
+	$ npm install -g bower
 
 
 Installation des dépendances
@@ -27,8 +27,8 @@ Installation des dépendances
 
 ::
 
-	cd /home/joebar/armadito-web-ui
-	bower install
+	$ cd /home/joebar/armadito-web-ui
+	$ bower install
 
 Configuration
 -------------
@@ -82,7 +82,7 @@ Lancement de l'interface
 
 Tout d'abord, le daemon Armadito doit être lancé.
 
-Ouvrez votre navigateur Web et accédez à l'URL suivante :
+Si c'est le cas, ouvrez votre navigateur Web et accédez à l'URL suivante :
 
 `<http://localhost:8888/app/index.html>`_
 
@@ -103,7 +103,7 @@ Installer grunt :
 
 ::
 
-         npm install -g grunt-cli
+         $ npm install -g grunt-cli
 
 Exécuter `grunt` pour compiler et `grunt serve` pour l'aperçu.
 

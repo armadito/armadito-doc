@@ -26,14 +26,14 @@ Checking installation:
 
 ::
 
-	npm --version
+	$ npm --version
 	2.15.1
 
 Then install bower using:
 
 ::
 
-	npm install -g bower
+	$ npm install -g bower
 
 Install git
 -----------
@@ -46,45 +46,29 @@ Checking installation:
 
 ::
 
-	git version 2.8.1.windows.1
+	$ git version
+    2.8.1.windows.1
 
 
 Installing modules in source tree
 ---------------------------------
 
-
-Run bower from **armadito-av/gui** directory to install the needed modules:
+Run bower from **armadito-web-ui** directory to install the needed modules:
 
 ::
-         
-         cd SOMEWHERE/armadito-av/gui
-	 bower install
-	 npm install
+
+     $ cd SOMEWHERE/armadito-web-ui
+	 $ bower install
+	 $ npm install
 
 This should output a lot of messages
-
-
-Installing node webkit
-----------------------
-
-Download the archive from: http://nwjs.io/downloads/
-
-Make sure to download the SDK.
-
-Extract the archive using Windows file explorer.
-
 
 Running the interface
 ---------------------
 
-First, the Armadito service must be launched.
+First, the Armadito daemon must be launched.
 
-The user interface can be launched with:
 
-::
-
-	cd SOMEWHERE\ng-armadito
-	SOMEWHEREELSE\nwjs-sdk-v0.14.0-win-x64\nw.exe .
 
 Debugging the interface
 -----------------------
@@ -99,7 +83,7 @@ Build with grunt
 
 Install grunt :
 
-:: 
+::
 
          npm install -g grunt-cli
 
@@ -107,6 +91,6 @@ Run `grunt` for building and `grunt serve` for preview.
 
 You can use "--force" if you want to build with warnings.
 
-.. note:: This project is generated with [yo angular generator] version 0.15.1. 
+.. note:: This project is generated with [yo angular generator] version 0.15.1.
 
 

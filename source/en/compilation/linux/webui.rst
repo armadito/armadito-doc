@@ -7,7 +7,7 @@ Sources are publicly available on github.com, you can get it with the following 
 
 ::
 
-   $ git clone https://github.com/armadito/armadito-web-ui.git -b DEV
+    $ git clone https://github.com/armadito/armadito-web-ui.git -b DEV
 
 
 Prerequisites
@@ -27,7 +27,7 @@ Installing bower (must be done as root too):
 
 ::
 
-	npm install -g bower
+	$ npm install -g bower
 
 
 Installing modules in source tree
@@ -37,8 +37,8 @@ After cloning the repository, the source tree of the user interface must be conf
 
 ::
 
-	cd /home/joebar/armadito-web-ui
-	bower install
+	$ cd /home/joebar/armadito-web-ui
+	$ bower install
 
 
 Configuration
@@ -99,7 +99,9 @@ Running the interface
 
 First, the Armadito daemon must be launched.
 
-Open your favorite web browser and got to the following URL : http://localhost:8888/app/index.html
+Open your web browser and go to the following URL :
+
+`<http://localhost:8888/app/index.html>`_
 
 
 Debugging the interface
