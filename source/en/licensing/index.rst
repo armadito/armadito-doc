@@ -4,7 +4,8 @@ Licensing
 Armadito antivirus can be divided in subprojects, which are the following :
 
 - Armadito core
-- Armadito gui
+- Armadito web ui
+- Armadito systray ui
 - Armadito windows driver
 - Armadito module clamav
 - Armadito module PDF
@@ -16,11 +17,17 @@ Armadito antivirus can be divided in subprojects, which are the following :
 * **License** : `LGPLv3 <https://www.gnu.org/licenses/license-list.html#LGPLv3>`_
 * **Github** : `armadito-av <https://github.com/armadito/armadito-av>`_
 
-**Armadito gui**
+**Armadito web ui**
 
-* **Description** : Graphical User Interface in Node-webkit with angularJS.
+* **Description** : Graphical User Interface with angularJs.
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
-* **Github** : `armadito-gui <https://github.com/armadito/armadito-gui>`_
+* **Github** : `armadito-web-ui <https://github.com/armadito/armadito-web-ui>`_
+
+**Armadito systray ui**
+
+* **Description** : System tray integration.
+* **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
+* **Github** : `armadito-systray-ui <https://github.com/armadito/armadito-systray-ui>`_
 
 **Armadito windows driver**
 
