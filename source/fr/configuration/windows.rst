@@ -11,7 +11,7 @@ La configuration de l'antivirus sur Windows peut être modifié dans le fichier 
 Analyse à la demande
 ~~~~~~~~~~~~~~~~~~~~
 
-Vous pouvez configurer le fonctionnement de l'analyse à la demande **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse à la demande dans **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
 
 ::
 
@@ -30,7 +30,7 @@ Vous pouvez configurer le fonctionnement de l'analyse à la demande **<install_d
 Analyse en temps réel
 ~~~~~~~~~~~~~~~~~~~~~
 
-Vous pouvez configurer le fonctionnement de l'analyse dans **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
+Vous pouvez configurer le fonctionnement de l'analyse en temps réel dans **<install_dir>\\Armadito-av\\conf\\armadito.conf** :
 
 ::
 
