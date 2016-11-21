@@ -1,24 +1,24 @@
 Armadito core
 =============
 
-Armadito core correspond à libarmadito bibliothèque. Les symboles exportés depuis cette bibliothèque permettent à toutes les bibliothèques de modules d'utiliser les mêmes API.
-Sous Windows, après la construction, une librairie appelée ** libarmadito.dll ** sera générée.
+Armadito core correspond à libarmadito. Les symboles exportés depuis cette bibliothèque permettent à toutes les  modules d'utiliser la même API.
+Sous Windows, le résultat de la compilation est une DLL : ** libarmadito.dll **.
 
-Conditions préalables
----------------------
+Pré-requis
+----------
 
 * Microsoft Visual Studio 2013 (Community edition or more)
 * Armadito windows dependencies archive (deps-x.zip)
 
-Uncompress ** deps-x.zip ** dans le répertoire racine des sources armadito-av. Vous devriez avoir ces chemins de dépendances exactes:
+Décompresser **deps-x.zip** dans le répertoire racine des sources armadito-av. Vous devriez avoir ces chemins de dépendances exactes:
 
 ::
 
    SOMEWHERE\armadito-av\deps\glib\...
    SOMEWHERE\armadito-av\deps\json-c\...
 
-Construire
-----------
+Compilation
+-----------
 
 Ouvrez la solution armadito-av VS à l'emplacement:
 
@@ -26,25 +26,22 @@ Ouvrez la solution armadito-av VS à l'emplacement:
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\Armadito-AV.sln
 
-Ensuite, sélectionnez le projet ** Lib-armadito \\ libarmadito ** dans l'Explorateur de solutions et créez-le.
+Ensuite, sélectionnez le projet **Lib-armadito\\libarmadito** dans l'Explorateur de solutions et lancez la compilation.
 
-
-En dehors
----------
-
-Out dossier pourrait être l'un de ces:
+Le résultat de la compilation devrait se trouver dans le dossier suivant :
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Debug
 
-or
+ou
 
 ::
 
    SOMEWHERE\armadito-av\build\windows\VS12\Armadito-AV\out\Release
 
-Si build a été un succès, vous devriez avoir ces fichiers:
+
+Si la compilation a été un succès, vous devriez avoir ces fichiers:
 
 ::
 

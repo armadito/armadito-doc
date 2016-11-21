@@ -34,6 +34,6 @@ La solution Armadito pour Visual Studio est constitué des sous-projets suivants
    modulePDF.rst
    moduleH1.rst
    driver.rst
-   gui.rst
+   webui.rst
 
 
