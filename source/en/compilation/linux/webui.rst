@@ -1,13 +1,14 @@
-Armadito gui
-============
+Armadito WebUI
+==============
 
-Armadito gui rely on recent web technologies to provide a multi-plateform graphical user interface for Armadito antivirus. 
+Armadito WebUI relies on recent web technologies to provide a multi-plateform graphical user interface for Armadito antivirus.
 
 Sources are publicly available on github.com, you can get it with the following command :
 
 ::
 
-   $ git clone https://github.com/armadito/armadito-gui.git -b DEV
+   $ git clone https://github.com/armadito/armadito-web-ui.git -b DEV
+
 
 Prerequisites
 -------------
@@ -15,26 +16,12 @@ Prerequisites
 To run Armadito graphical user interface, you need:
 
 - bower
-- node.js
 
 
 Installing node and bower
 -------------------------
 
 Installations are done as root.
-
-Installing node.js:
-
-::
-
-	apt-get install nodejs-legacy
-
-Checking installation:
-
-::
-
-	npm --version
-	1.4.21
 
 Installing bower (must be done as root too):
 
@@ -50,9 +37,9 @@ After cloning the repository, the source tree of the user interface must be conf
 
 ::
 
-	cd /home/joebar/armadito-av/gui
+	cd /home/joebar/armadito-web-ui
 	bower install
-	npm install
+
 
 Configuration
 -------------
@@ -62,7 +49,7 @@ A shell script **autogen.sh** is provided to ease this step:
 
 ::
 
-    $ ./autogen.sh 
+    $ ./autogen.sh
     + aclocal --force
     + automake --foreign --add-missing --force-missing --copy
     + autoconf --force
@@ -72,8 +59,8 @@ This will generate the **Makefile.in** files and the **configure** script.
 **configure** script takes the following useful options:
 
     --prefix=PREFIX         install architecture-independent files in PREFIX [default is /usr/local]
-    
-The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless 
+
+The **PREFIX** directory will be used by **make install**. Its use is mandatory, unless
 building a package and installing in system directories, since building the
 scanning modules and the graphical user interface will need a libarmadito properly
 installed.
@@ -82,7 +69,7 @@ Typical invocation of the configure script is:
 
 ::
 
-    $ /home/joebar/armadito-av/gui/configure --prefix=/home/joebar/install
+    $ /home/joebar/armadito-web-ui/configure --prefix=/home/joebar/install
 
 Building
 --------
@@ -106,12 +93,14 @@ After build, installation is done by:
 This will install libraries, tools, header files... in the subdirectories of the **PREFIX**
 directory defined at configure time.
 
+
 Running the interface
 ---------------------
 
-First, the Armadito daemon must be launched. Refer to Armadito documentation for instructions.
+First, the Armadito daemon must be launched.
 
 Open your favorite web browser and got to the following URL : http://localhost:8888/app/index.html
+
 
 Debugging the interface
 -----------------------
@@ -121,18 +110,17 @@ Once the interface is launched:
 - right-click in the window to display debug menu and select "Inspect" or tap F12
 - in the inspector window, select the "console" tab
 
+
 Build with grunt
 ----------------
 
 Install grunt :
 
-:: 
+::
 
          npm install -g grunt-cli
 
 Run `grunt` for building and `grunt serve` for preview.
 
 You can use "--force" if you want to build with warnings.
-
-.. note:: This project is generated with [yo angular generator] version 0.15.1.
 
