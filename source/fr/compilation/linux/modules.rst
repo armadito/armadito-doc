@@ -7,8 +7,8 @@ Le choix des modules est en effet totalement libre.
 
 .. warning:: Assurez-vous d'avoir compilé **libarmadito** (core) avant de compiler un de ces modules.
 
-Les prérequis
--------------
+Pré-requis
+----------
 
 Pour compiler un module, vous avez besoin des outils suivants:
 

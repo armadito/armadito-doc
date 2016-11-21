@@ -29,10 +29,7 @@ La solution Armadito pour Visual Studio est constitué des sous-projets suivants
 
 .. toctree::
 
-   core.rst
-   clamav.rst
-   modulePDF.rst
-   moduleH1.rst
+   core_and_modules.rst
    driver.rst
    webui.rst
 
