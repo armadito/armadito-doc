@@ -1,8 +1,8 @@
 Installation sur Windows
 =======================
 
-Conditions préalables
-*********************
+Pré-requis
+**********
 
 Packages redistribuables Visual C++ for Visual Studio 2013:
 	- vcredist_x64.exe
@@ -14,7 +14,7 @@ Packages redistribuables Visual C++ for Visual Studio 2013:
 Installation avec l'installateur MSI
 ************************************
 
-1. Téléchargez et installez les prérequis (voir la section précédente)
+1. Téléchargez et installez les pré-requis (voir la section précédente)
 
 2. Télécharger armadito-av msi:
 
@@ -29,36 +29,38 @@ Installation avec l'installateur MSI
 
 	Lancez le programme d'installation Armadito-setup-0.10.0.msi
 
+
 Installation à partir de sources
 ********************************
 
-1. Créez les sources armadito-av à partir du projet de solution Visual Studio.
+1. Compilez les sources de l'antivirus à partir du projet de solution Visual Studio.
 
-Suivez les instructions de la section ** Compilation **> ** Compilation sous Windows ** de cette documentation.
+Suivez les instructions de la section **Compilation** > **Compilation sous Windows** de cette documentation.
 
-2. Copiez les fichiers de bases de données du module dans le référentiel:
+2. Copiez les fichiers de bases de données du module dans le dossier adéquat :
 
 ::
 
     SOMEWHERE\\armadito-av\\build\\windows\\VS\\Armadito-AV\\out\\[build_mode]\\modules\\DB
 
-3. Installez le pilote en exécutant la commande suivante dans une invite en tant qu'administrateur:
+
+3. Installez le driver en exécutant la commande suivante dans une invite en tant qu'administrateur:
 
 ::
 
     ArmaditoGuard-setup --install
 
-4. Installez le service d'analyse en exécutant la commande suivante dans une invite en tant qu'administrateur:
+4. Installez le service d'analyse en exécutant la commande suivante dans une invite de commandes en tant qu'administrateur:
 
 ::
 
-    ArmaditoSvc --installBoot (service started at system start)
+    ArmaditoSvc --installBoot (service lancé au démarrage de Windows)
 
 ou
 
 ::
 
-    ArmaditoSvc --install (service started on demand)
+    ArmaditoSvc --install (service lancé sur demande)
 
 .. toctree::
 
