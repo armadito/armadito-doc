@@ -43,7 +43,7 @@ Armadito antivirus peut être divisé en plusieurs sous-projets, qui sont les su
 
 **Armadito module PDF**
 
-* **Description** : Module d'analyse des fichiers PDFs.
+* **Description** : Module d'analyse des fichiers PDF.
 * **License** : `GPLv3 <https://www.gnu.org/licenses/license-list.html#GNUGPLv3>`_
 * **Github** : `armadito-mod-pdf <https://github.com/armadito/armadito-mod-pdf>`_
 
