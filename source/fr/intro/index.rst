@@ -1,12 +1,10 @@
 Introduction
 ============
 
-**Armadito Antivirus** est un antivirus open-source qui protège vos ordinateurs et vos serveurs contre les malwares et les virus. Il inclut la détection classique de logiciels malveillants basés sur les signatures et fournit des modules de détection heuristiques novateurs pour les fichiers binaires (MS-Windows et GNU / Linux) et pour les documents PDF.
+**Armadito Antivirus** est un antivirus open-source qui protège vos ordinateurs personnels et serveurs contre les malwares. Il inclut la détection classique de logiciels malveillants basés sur des signatures et fournit des modules de détection heuristiques novateurs pour les fichiers binaires (MS-Windows et GNU / Linux) et pour les documents PDF.
 
-Ce projet est conçu d'une manière qui permet à quiconque d'améliorer les techniques anti-malware de l'état de l'art.
-Par exemple, les experts en sécurité ne peuvent se concentrer sur les techniques anti-malwares qu'en développant leurs propres modules en langage C.
-Ce système plugin vise à encourager les gens à tester et à développer librement des techniques expérimentales.
+Ce projet est conçu d'une manière qui permet à quiconque d'améliorer les techniques de détection des contenus malicieux.
+En effet, les experts en sécurité peuvent développer leurs propres modules d'analyse. N'ayant pas à se préoccuper sur le fonctionnement du reste de l'antivirus, ils sont alors à même de se concentrer uniquement sur les techniques anti-malwares. Cette posssibilité d'implémentation modulaire vise à encourager les gens à tester et à développer librement des techniques expérimentales.
 
-Une interface intuitive et conviviale donne accès à toutes les fonctionnalités d'Armadito: analyse à la demande, protection en temps réel, zone de quarantaine, journal de détection des menaces, etc. Cette interface a été développée à l'aide de la technologie AngularJs / HTML5 / CSS3. Par conséquent, cette interface utilisateur graphique vise à être multi-plate-forme (Windows, Linux, Mac OS X).
-.. toctree::
-
+Pour une utilisation personnelle, une interface graphique simple a été développé avec des technologies web (AngularJs / HTML5 / CSS3). L'interface est par conséquent multi-plateforme (Windows, Linux, Mac OS X).
+Elle donne accès à toutes les fonctionnalités de l'antivirus : analyse à la demande, protection en temps réel, zone de quarantaine, journal de détection des menaces, etc.
