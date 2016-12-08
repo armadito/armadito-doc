@@ -6,17 +6,17 @@ Some screenshots :
 Status board
 ------------
 
-.. image:: ../../images/Status_tab.png
+.. image:: ../../images/gui_status_tab_en.png
    :alt: Status tab
 
 Scan
 ----
 
-.. image:: ../../images/Scan_tab.png
+.. image:: ../../images/gui_scan_tab_en.png
    :alt: Scan tab
 
 Journal
 -------
 
-.. image:: ../../images/Journal_tab.png
+.. image:: ../../images/gui_journal_tab_en.png
    :alt: Journal tab
