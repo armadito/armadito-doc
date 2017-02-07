@@ -25,3 +25,9 @@ Armadito Antivirus is an open-source antivirus that protects your computers and 
    faq/index.rst
    screenshots/index.rst
 
+
+Forum
+  `forum.armadito.org <https://forum.armadito.org>`_
+IRC
+   #armadito at irc.freenode.net
+
